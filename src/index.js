@@ -1,1 +1,1 @@
-const time = 10;
+import './sass/main.scss';
