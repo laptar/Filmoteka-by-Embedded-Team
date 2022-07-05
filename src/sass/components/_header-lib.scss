@@ -64,6 +64,10 @@ $active: #ff001b;
 
 .nav {
     margin-left: auto;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.17;
     &__link {
         color: $white;
     }
@@ -95,6 +99,11 @@ $active: #ff001b;
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
     .btn {
         display: inline-block;
         min-width: 130px;
@@ -111,9 +120,13 @@ $active: #ff001b;
         &:not(:last-child) {
             margin-right: 15px;
         }
-        // &--active{
-        // }
-        // &--clear{
-        // }
+        &--active {
+            border: 1px solid $accent;
+            background-color: $accent;
+        }
+        &--clear {
+            background-color: transparent;
+            border: 1px solid $white;
+        }
     }
 }
