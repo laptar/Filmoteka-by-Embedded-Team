@@ -39,6 +39,20 @@
     }
 }
 
+.gallery__item{
+    @include mq(mobile) {
+        width: 440px;
+    }
+
+    @include mq(tablet) {
+        width: 336px;
+    }
+
+    @include mq(desktop) {
+        width: 393px;
+    }
+}
+
 
 .gallery__film-title {
     font-weight: 500;
