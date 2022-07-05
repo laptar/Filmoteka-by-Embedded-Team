@@ -64,6 +64,10 @@ $active: #ff001b;
 
 .nav {
     margin-left: auto;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.17;
     &__link {
         color: $white;
     }
@@ -95,6 +99,11 @@ $active: #ff001b;
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
     .btn {
         display: inline-block;
         min-width: 130px;
@@ -106,14 +115,27 @@ $active: #ff001b;
         transition: background-color $transition;
         &:hover,
         &:focus {
-            color: $accent;
+            background-color: #be4c00e1;
+            color: $white;
+            border: 1px solid #ff7d32ef;
+            -webkit-animation-name: pulse;
+            animation-name: pulse;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
         }
         &:not(:last-child) {
             margin-right: 15px;
         }
-        // &--active{
-        // }
-        // &--clear{
-        // }
+        &__clear {
+            background-color: transparent;
+            border: 1px solid $white;
+        }
+        &--active {
+            border: 1px solid $accent;
+            background-color: $accent;
+            color: $white;
+        }
     }
 }
