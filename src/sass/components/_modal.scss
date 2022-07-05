@@ -1,0 +1,126 @@
+.back-drop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  visibility: visible;
+  pointer-events: initial;
+  overflow-y: auto;
+
+  transition-property: opacity, visibility, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.modal {
+  margin-top: 20px;
+  position: absolute;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 280px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+}
+
+.is-hidden {
+  transform: scale(3);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal__image {
+  width: 240px;
+  height: 360px;
+  background-color: aqua;
+  border-radius: 5px;
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 8;
+  right: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+.modal__close-icon {
+  fill: #000000;
+}
+
+.modal-info {
+  margin-top: 20px;
+}
+
+.modal__title {
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+.modale_table {
+  margin-top: 20px;
+  width: 240px;
+}
+
+.modale__table-name {
+  font-size: 12px;
+  line-height: 16px;
+  color: #8c8c8c;
+}
+
+.modale__table-about {
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.modal__about-title {
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 20px;
+}
+
+.modal__about-text {
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  margin-top: 8px;
+}
+.modal__button-watched,
+.modal__button-queue {
+  width: 110px;
+  height: 44px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 0;
+  display: inline-block;
+  padding-top: 6px padding-left 27px;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  &:hover {
+    background-color: #ff6b01;
+    border: none;
+    color: #ffffff;
+  }
+}
+
+.modal__button-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
