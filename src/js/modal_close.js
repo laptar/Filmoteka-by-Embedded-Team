@@ -9,6 +9,7 @@ function renderModal(arr) {
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModalOpen(event) {
+    // console.log(hgjhgjhgjhgjhgjhgjhgjhgjh);
     if (event.target.nodeName === 'IMG') {
       console.log(event.target.id);
       console.log(arr);
