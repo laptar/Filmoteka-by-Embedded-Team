@@ -62,7 +62,7 @@
 
     height: 3px;
     width: 100%;
-    background-color: #ff6b08;
+    background-color: #ff001b;
   }
 }
 
@@ -93,7 +93,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    width: 100%;
+    max-width: 768px;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
       url(/src/images/Tablet/abstract-background-with-red-lines\ 1.jpg);
@@ -110,7 +110,7 @@
   }
 
   @media screen and (min-width: 1024px) {
-    width: 100%;
+    max-width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
       url(/src/images/Desktop/abstract-background-with-red-lines\ 1.jpg);
 
@@ -160,10 +160,10 @@
 
   &:focus {
     outline: none;
-    border-bottom: 1px solid #ff6b08;
+    border-bottom: 1px solid #ff001b;
 
     &::placeholder {
-      color: #ff6b08;
+      color: #ff001b;
     }
   }
 }
@@ -174,11 +174,11 @@
   right: 0;
 
   @media screen and (min-width: 768px) {
-    right: 142px;
+    right: 185px;
   }
 
   @media screen and (min-width: 1280px) {
-    right: 273px;
+    right: 310px;
   }
 
   padding: 0;
@@ -191,7 +191,7 @@
   transition: color, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 
   .search-input:focus ~ & {
-    color: #ff6b08;
+    color: #ff001b;
   }
 }
 
