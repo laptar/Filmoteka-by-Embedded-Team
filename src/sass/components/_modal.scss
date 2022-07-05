@@ -29,6 +29,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
+
+  @include mq(tablet) {
+    display: flex;
+    width: 704px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    justify-content: baseline;
+  }
+  @include mq(desktop) {
+    width: 806px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 .is-hidden {
@@ -43,34 +57,67 @@
   height: 360px;
   background-color: aqua;
   border-radius: 5px;
+  overflow: hidden;
+  @include mq(tablet) {
+    width: 264px;
+    height: 374px;
+    margin-right: 70px;
+  }
+  @include mq(desktop) {
+    width: 375px;
+    height: 478px;
+    margin-right: 16px;
+  }
 }
 
 .modal__button-close {
+  padding: 0;
   position: absolute;
   top: 8;
   right: 8;
+  width: 30px;
+  height: 30px;
+  background-image: url(/src/images/SVG/close.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
 }
+
 .modal__close-icon {
   fill: #000000;
 }
 
 .modal-info {
+  display: block;
   margin-top: 20px;
+  @include mq(tablet) {
+    margin-top: 0;
+    max-width: 264px;
+  }
+  @include mq(desktop) {
+    margin-top: 0;
+    max-width: 391px;
+  }
 }
 
 .modal__title {
   font-size: 20px;
   line-height: 23px;
   text-transform: uppercase;
+  @include mq(desktop) {
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
 .modale_table {
   margin-top: 20px;
-  width: 240px;
+  max-width: 240px;
+  @include mq(tablet) {
+    max-width: 264px;
+  }
 }
 
 .modale__table-name {
@@ -79,10 +126,25 @@
   color: #8c8c8c;
 }
 
+.vote {
+  width: 36px;
+  height: 16px;
+  background-color: #ff6b01;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 14px;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
 .modale__table-about {
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
+  color: #000000;
 }
 .modal__about-title {
   font-size: 12px;
@@ -98,6 +160,18 @@
   color: #000000;
   margin-top: 8px;
 }
+.buttons {
+  display: inline-flex;
+  justify-content: baseline;
+  margin-top: 20px;
+  @include mq(tablet) {
+    margin-top: 40px;
+  }
+  @include mq(desktop) {
+    margin-top: 20px;
+  }
+}
+
 .modal__button-watched,
 .modal__button-queue {
   width: 110px;
@@ -105,9 +179,8 @@
   border-radius: 5px;
   text-align: center;
   text-transform: uppercase;
-  margin-right: 0;
-  display: inline-block;
-  padding-top: 6px padding-left 27px;
+  padding-top: auto;
+  padding-left: auto;
   color: #000000;
   border: 1px solid #000000;
   border-radius: 5px;
@@ -116,11 +189,34 @@
     border: none;
     color: #ffffff;
   }
+  @include mq(tablet) {
+    width: 124px;
+  }
+  @include mq(desktop) {
+    width: 136px;
+  }
+}
+
+.modal__button-watched {
+  margin-right: 20px;
+  @include mq(tablet) {
+    margin-right: 15px;
+  }
+  @include mq(desktop) {
+    margin-right: 15px;
+  }
 }
 
 .modal__button-text {
-  display: flex;
-  align-items: center;
-  text-align: center;
   text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  padding: auto;
+  justify-content: center;
+}
+
+.accent {
+  background-color: #ff6b01;
+  border: none;
+  color: #ffffff;
 }

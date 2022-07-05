@@ -1,14 +1,14 @@
-<div class="back-drop">
+<div class="back-drop is-hidden" data-modal>
   <div class="modal">
-    <button type="button" class="modal__button-close">
-      <svg
+    <button type="button" class="modal__button-close" data-modal-close>
+      <!-- <svg
         class="modal__close-icon"
         aria-label="Закрыть"
-        width="30px,"
-        heigth="30px"
+        width="30"
+        heigth="30"
       >
         <use href="./images/SVG/close.svg"></use>
-      </svg>
+      </svg> -->
     </button>
     <div class="modal__image">
       <img
@@ -24,7 +24,10 @@
         <tbody class="modale_table">
           <tr class="modale_table-row">
             <td class="modale__table-name">Vote/Votes</td>
-            <td class="modale__table-about"><span></span></td>
+            <td class="modale__table-about">
+              <span class="vote">1/8</span>
+              <span class="modale__table-name">/</span>
+            </td>
           </tr>
           <tr class="modale__table-row">
             <td class="modale__table-name">Popularity</td>
@@ -44,13 +47,18 @@
         </tbody>
       </table>
       <h2 class="modal__about-title">About</h2>
-      <p class="modal__about-text"></p>
-      <button type="button" class="modal__button-watched">
-        <span class="modal__button-text">add to Watched</span>
-      </button>
-      <button type="button" class="modal__button-queue">
-        <span class="modal__button-text">add to queue</span>
-      </button>
+      <p class="modal__about-text">Something interesting about film</p>
+      <div class="buttons">
+        <button
+          type="button"
+          class="modal__button-watched accent modal__button-text"
+        >
+          add to Watched
+        </button>
+        <button type="button" class="modal__button-queue modal__button-text">
+          add to queue
+        </button>
+      </div>
     </div>
   </div>
 </div>
