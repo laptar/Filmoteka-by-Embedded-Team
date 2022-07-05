@@ -1,9 +1,12 @@
 import './JS/Crew/crew-list';
 import fetchPopular from './JS/fetchPopular';
 import searchMovie from './JS/searchMovie';
+import fetchGenres from './JS/fetchGenres';
 import './sass/main.scss';
 
-import { renderModal } from './JS/modal_close';
+import {
+  renderModal
+} from './JS/modal_close';
 const list = document.querySelector('.gallery__list');
 const form = document.querySelector('.search');
 const warning = document.querySelector('.warning');
@@ -15,8 +18,10 @@ document.addEventListener('submit', onFormSubmit);
 function onFormSubmit(e) {
   e.preventDefault();
   const {
-    elements: { search },
-  } = event.target;
+    elements: {
+      search
+    },
+  } = e.target;
   const query = search.value;
 
   searchMovie(query).then(data => {
@@ -59,3 +64,7 @@ fetchPopular().then(data => {
 });
 
 // renderModal(popular);
+
+
+
+
