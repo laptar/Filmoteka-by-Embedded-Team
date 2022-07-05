@@ -1,3 +1,4 @@
+import './JS/Crew/crew-list';
 import fetchPopular from './JS/fetchPopular';
 import searchMovie from './JS/searchMovie';
 import './sass/main.scss';
