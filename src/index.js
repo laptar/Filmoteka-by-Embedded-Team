@@ -1,10 +1,10 @@
+import './JS/scroll-up';
 import './js/Crew/crew-list';
 import { fetchPopular } from './js/fetchPopular.js';
 import { searchMovie } from './js/searchMovie';
 import { fetchGenres } from './js/fetchGenres.js';
 import { renderMovieCard } from './js/renderMovieCard';
 import { addToLocalStorage } from './js/addToLocalStorage';
-// import './JS/scroll-up';
 import './sass/main.scss';
 
 import { renderCard } from './JS/renderCard';

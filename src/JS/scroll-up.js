@@ -1,14 +1,15 @@
+import throttle from 'lodash.throttle';
 const scrollUp = document.querySelector('[scroll-up-button]');
 
-window.addEventListener('scroll', throttle(onScroll(scrollUp), 250));
+window.addEventListener('scroll', throttle(hideOnScroll(scrollUp), 250));
 scrollUp.addEventListener('click', toTopOnClick);
 
-function onScroll(element) {
+function hideOnScroll(element) {
   return function onScroll(event) {
-    if (page < document.documentElement.clientHeight) {
-      element.classList.add('visuallyhidden');
+    if (scrollY < document.documentElement.clientHeight) {
+      element.classList.add('visually-hidden');
     } else {
-      element.classList.remove('visuallyhidden');
+      element.classList.remove('visually-hidden');
     }
   };
 }
