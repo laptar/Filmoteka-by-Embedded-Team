@@ -23,3 +23,5 @@ function clickBtnWatch(event) {
   console.log(event.target);
   libList.innerHTML = renderMovieCard(wachedArray);
 }
+import './JS/Crew/crew-list';
+import './JS/scroll-up';
