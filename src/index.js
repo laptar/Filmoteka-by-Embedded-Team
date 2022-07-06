@@ -1,3 +1,4 @@
+import './JS/scroll-up';
 import './js/Crew/crew-list';
 import { fetchPopular } from './js/fetchPopular.js';
 import { searchMovie } from './js/searchMovie';

@@ -1,0 +1,48 @@
+.scroll-up-wrapper {
+  position: fixed;
+  bottom: 39px;
+  right: 10px;
+
+  z-index: 10;
+
+  color: #545454;
+
+  cursor: pointer;
+
+  transition: color, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: #ff001b;
+  }
+
+  @media screen and (min-width: 480px) {
+    bottom: 39px;
+    right: calc(((85vw - 480px) / 2));
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: 39px;
+    right: calc(((85vw - 768px) / 2));
+  }
+
+  @media screen and (min-width: 1280px) {
+    bottom: 55px;
+    right: calc(((85vw - 1280px) / 2));
+  }
+}
+
+.scroll-up-icon {
+  width: 40px;
+  height: 40px;
+
+  @media screen and (min-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 60px;
+    height: 60px;
+  }
+}
