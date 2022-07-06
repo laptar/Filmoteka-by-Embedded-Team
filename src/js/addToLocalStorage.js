@@ -12,7 +12,7 @@ function addToLocalStorage(fetch, fetchGenres, movie = '') {
           });
         });
       });
-      // console.log(cardGanr);
+      console.log(cardGanr);
 
       localStorage.setItem('currentPage', JSON.stringify(cardGanr));
     });
