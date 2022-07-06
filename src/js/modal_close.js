@@ -1,4 +1,4 @@
-function renderModal(arr) {
+function renderModal() {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
 
@@ -12,10 +12,12 @@ function renderModal(arr) {
     // console.log(event.target);
 
     if (event.target.nodeName === 'IMG') {
+      console.log(JSON.parse(localStorage.getItem('currentPage')));
+      const arr = JSON.parse(localStorage.getItem('currentPage'));
       const currentMovie = arr.find(
         curentId => String(curentId.id) === event.target.id
       );
-      // ДОдаємо дві змінні 2 обєкта які беремо із локал сторадж, потім кожен розпрсимо, і кожен файндом перебиремо, якщо фільм доданий то в шаблонку вставляємо ернарнік, і міняємо ADD /remuv
+      // Додаємо дві змінні 2 обєкта які беремо із локал сторадж, потім кожен розпрсимо, і кожен файндом перебиремо, якщо фільм доданий то в шаблонку вставляємо тернарнік, і міняємо ADD /remuv
       const modalRender = `
       <button type="button" class="modal__button-close" data-modal-close></button>
     <div class="modal__image">
@@ -32,7 +34,9 @@ function renderModal(arr) {
             <td class="modale__table-name">Vote/Votes</td>
             <td class="modale__table-about">
               <span class="vote">${currentMovie.vote_average}</span>
-              <span class="modale__table-name">/</span>${currentMovie.vote_count}
+              <span class="modale__table-name">/</span>${
+                currentMovie.vote_count
+              }
             </td>
           </tr>
           <tr class="modale__table-row">
@@ -47,7 +51,9 @@ function renderModal(arr) {
           </tr>
           <tr class="modale__table-row">
             <td class="modale__table-name">Genre</td>
-            <td class="modale__table-about"></td>
+            <td class="modale__table-about">${currentMovie.genre_ids.join(
+              ', '
+            )}</td>
           </tr>
         </tbody>
       </table>
