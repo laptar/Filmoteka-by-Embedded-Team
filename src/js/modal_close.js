@@ -56,7 +56,7 @@ function renderModal(arr) {
       <div class="buttons">
         <button
           type="button"
-          class="modal__button-watched accent modal__button-text"
+          class="modal__button-watched modal__button-text"
         >
           add to Watched
         </button>
@@ -66,9 +66,6 @@ function renderModal(arr) {
       </div>
     </div>`;
 
-      // console.log(event.target.id);
-      // console.log(arr);
-      // console.log(currentMovie);
       refs.info.insertAdjacentHTML('beforeend', modalRender);
       refs.modal.classList.remove('is-hidden');
       const closeModalBtn = document.querySelector('[data-modal-close]');
