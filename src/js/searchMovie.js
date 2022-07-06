@@ -4,8 +4,10 @@ const LANG = "en-US";
 const PAGE = 1;
 
 
-export default function searchMovie(query) {
-    return fetch(`${BASE_URL}query=${query}&api_key=${API_KEY}&language=${LANG}&page=${PAGE}`).then(response => {
+async function searchMovie(query) {
+    return await fetch(`${BASE_URL}query=${query}&api_key=${API_KEY}&language=${LANG}&page=${PAGE}`).then(response => {
         return response.json().catch(error => { console.log(error) })
     })
 }
+
+export { searchMovie }
