@@ -11,3 +11,10 @@ export default function fetchPopular() {
     return response.json();
   });
 }
+
+// Функция добавляет популярные фильмы  в локальное хранилище
+fetchPopular().then(data => {
+  localStorage.setItem('popular', JSON.stringify(data));
+});
+
+const popularFilmsArray = JSON.parse(localStorage.getItem('popular'));

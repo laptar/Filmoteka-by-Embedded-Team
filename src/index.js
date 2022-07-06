@@ -4,10 +4,18 @@ import searchMovie from './js/searchMovie';
 import fetchGenres from './js/fetchGenres';
 import './sass/main.scss';
 
+
 import { renderModal } from './js/modal_close';
+
+import { renderModal } from './JS/modal_close';
+
 const list = document.querySelector('.gallery__list');
 const form = document.querySelector('.search');
 const warning = document.querySelector('.warning');
+
+
+
+
 
 // Cлушатели
 document.addEventListener('submit', onFormSubmit);
@@ -41,7 +49,6 @@ function onFormSubmit(e) {
   });
 }
 
-// Функция загружает популярные фильмы на главную страницу
 let popular;
 
 fetchPopular().then(data => {
@@ -50,7 +57,8 @@ fetchPopular().then(data => {
   const markup = popular.map(movie => {
     const releaseDate = movie.release_date.split('-')[0];
     return `<li class="gallery__item">
-                            <img class="gallery__image" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}" id="${movie.id}">
+                            <img class="gallery__image" src="https://image.tmdb.org/t/p/w500/${movie.poster_path
+      }" alt="${movie.title}" id="${movie.id}">
                             <h3 class="gallery__film-title">${movie.title}</h3>
                             <p class="gallery__film-genres"><span class="gallery__film-year">${releaseDate}</span></p>
                     </li>`;
@@ -58,5 +66,6 @@ fetchPopular().then(data => {
   list.innerHTML = markup.join('');
   renderModal(popular);
 });
+
 
 // renderModal(popular);
