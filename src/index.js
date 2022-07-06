@@ -6,30 +6,33 @@ import { renderMovieCard } from './js/renderMovieCard';
 import { addToLocalStorage } from './js/addToLocalStorage';
 import './sass/main.scss';
 
-import { renderCard } from './JS/renderCard';
+import { renderCard } from './js/renderCard';
 import { renderModal } from './js/modal_close';
+import { counter } from './js/btn-pag';
 
 const list = document.querySelector('.gallery__list');
 const form = document.querySelector('.search');
 const warning = document.querySelector('.warning');
 
-//добавляет в локальное хранилище
+let serchFilm = '';
+let page = 1;
 
-addToLocalStorage(fetchPopular, fetchGenres);
-
-fetchPopular().then(data => {
+fetchPopular(page).then(data => {
+  addToLocalStorage(fetchPopular, fetchGenres, page);
   const popular = data.results;
   const markup = renderMovieCard(popular);
   list.innerHTML = markup;
+  // console.log(data);
+  counter(data.total_pages, page);
 });
 
 // Cлушатели
 document.addEventListener('submit', onFormSubmit);
 function onFormSubmit(e) {
   e.preventDefault();
-  const query = e.target.search.value;
-  addToLocalStorage(searchMovie, fetchGenres, query);
-  searchMovie(query).then(data => {
+  serchFilm = e.target.search.value;
+  addToLocalStorage(searchMovie, fetchGenres, serchFilm);
+  searchMovie(serchFilm).then(data => {
     const length = data.results.length;
     if (length === 0) {
       warning.classList.remove('hidden');
@@ -39,7 +42,51 @@ function onFormSubmit(e) {
       const movies = data.results;
       const markup = renderMovieCard(movies);
       list.innerHTML = markup;
+      counter(data.total_pages);
     }
   });
 }
+function renderWeb(page = 1) {
+  //добавляет в локальное хранилище
+  console.log(`serch: ${serchFilm}`);
+  if (!serchFilm) {
+    fetchPopular(page).then(data => {
+      addToLocalStorage(fetchPopular, fetchGenres, page);
+      const popular = data.results;
+      const markup = renderMovieCard(popular);
+      list.innerHTML = markup;
+    });
+  } else {
+    searchMovie(page, serchFilm).then(data => {
+      addToLocalStorage(searchMovie, fetchGenres, serchFilm);
+      const movies = data.results;
+      const markup = renderMovieCard(movies);
+      list.innerHTML = markup;
+    });
+  }
+  // Cлушатели
+  document.addEventListener('submit', onFormSubmit);
+  function onFormSubmit(e) {
+    e.preventDefault();
+    serchFilm = e.target.search.value;
+    addToLocalStorage(searchMovie, fetchGenres, serchFilm);
+    searchMovie(serchFilm).then(data => {
+      const length = data.results.length;
+      if (length === 0) {
+        warning.classList.remove('hidden');
+        form.reset();
+      } else {
+        warning.classList.add('hidden');
+        const movies = data.results;
+        const markup = renderMovieCard(movies);
+        list.innerHTML = markup;
+      }
+    });
+  }
+}
+renderWeb();
+
 renderModal();
+console.log(serchFilm);
+
+export { renderWeb };

@@ -1,5 +1,5 @@
-function addToLocalStorage(fetch, fetchGenres, movie = '') {
-  fetch(movie).then(cards => {
+function addToLocalStorage(fetch, fetchGenres, page = 1, movie = '') {
+  fetch(page, movie).then(cards => {
     // console.log(card.results);
     fetchGenres().then(data => {
       const cardGanr = cards.results;
@@ -12,7 +12,7 @@ function addToLocalStorage(fetch, fetchGenres, movie = '') {
           });
         });
       });
-      console.log(cardGanr);
+      // console.log(cardGanr);
 
       localStorage.setItem('currentPage', JSON.stringify(cardGanr));
     });
