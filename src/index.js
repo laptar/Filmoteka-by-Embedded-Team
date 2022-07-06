@@ -4,6 +4,7 @@ import searchMovie from './js/searchMovie';
 import fetchGenres from './js/fetchGenres';
 import './sass/main.scss';
 
+import { renderCard } from './JS/renderCard';
 import { renderModal } from './js/modal_close';
 const list = document.querySelector('.gallery__list');
 const form = document.querySelector('.search');
@@ -28,34 +29,19 @@ function onFormSubmit(e) {
     } else {
       warning.classList.add('hidden');
       const movies = data.results;
-      const markup = movies.map(movie => {
-        const releaseDate = movie.release_date.split('-')[0];
-        return `<li class="gallery__item">
-                                <img class="gallery__image" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
-                                <h3 class="gallery__film-title">${movie.title}</h3>
-                                <p class="gallery__film-genres"><span class="gallery__film-year">${releaseDate}</span></p>
-                        </li>`;
-      });
-      list.innerHTML = markup.join('');
+      const markup = renderCard(movies);
+      list.innerHTML = markup;
     }
   });
 }
 
 // Функция загружает популярные фильмы на главную страницу
-let popular;
 
 fetchPopular().then(data => {
-  popular = data.results;
+  const popular = data.results;
   // console.log(popular);
-  const markup = popular.map(movie => {
-    const releaseDate = movie.release_date.split('-')[0];
-    return `<li class="gallery__item">
-                            <img class="gallery__image" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}" id="${movie.id}">
-                            <h3 class="gallery__film-title">${movie.title}</h3>
-                            <p class="gallery__film-genres"><span class="gallery__film-year">${releaseDate}</span></p>
-                    </li>`;
-  });
-  list.innerHTML = markup.join('');
+  const markup = renderCard(popular);
+  list.innerHTML = markup;
   renderModal(popular);
 });
 
