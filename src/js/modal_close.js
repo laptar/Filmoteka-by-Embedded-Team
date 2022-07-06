@@ -76,6 +76,17 @@ function renderModal() {
       refs.modal.classList.remove('is-hidden');
       const closeModalBtn = document.querySelector('[data-modal-close]');
       closeModalBtn.addEventListener('click', toggleModal);
+      document.addEventListener('keydown', ev => {
+        refs.modal.classList.add('is-hidden');
+        refs.info.innerHTML = '';
+      });
+      refs.modal.addEventListener('mousedown', evt => {
+        console.dir(evt.target.nodeName);
+        if (evt.target.nodeName === 'SECTION') {
+          refs.modal.classList.add('is-hidden');
+          refs.info.innerHTML = '';
+        }
+      });
     }
   }
   function toggleModal() {
