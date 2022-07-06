@@ -1,3 +1,5 @@
+import './js/Crew/crew-list';
+import './js/scroll-up';
 import './sass/main.scss';
 import { renderMovieCard } from './js/renderMovieCard';
 import { renderModal } from './js/modal_close';
@@ -11,17 +13,17 @@ const queueArray = JSON.parse(localStorage.getItem('queue'));
 renderMovieCard(wachedArray);
 const markup = renderMovieCard(wachedArray);
 libList.innerHTML = markup;
-
+renderModal('watched');
 queue.addEventListener('click', clickBtn);
 
 function clickBtn() {
   libList.innerHTML = renderMovieCard(queueArray);
+  renderModal('queue');
 }
 
 watched.addEventListener('click', clickBtnWatch);
 function clickBtnWatch(event) {
   console.log(event.target);
   libList.innerHTML = renderMovieCard(wachedArray);
+  // renderModal('watched');
 }
-import './JS/Crew/crew-list';
-import './JS/scroll-up';
