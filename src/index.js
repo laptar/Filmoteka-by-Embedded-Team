@@ -13,30 +13,25 @@ const list = document.querySelector('.gallery__list');
 const form = document.querySelector('.search');
 const warning = document.querySelector('.warning');
 
-
-
-
 //добавляет в локальное хранилище
 
 addToLocalStorage(fetchPopular, fetchGenres);
 const genresArray = JSON.parse(localStorage.getItem('genres'));
-let popularFilmsArray = JSON.parse(localStorage.getItem('popular'))
+let popularFilmsArray = JSON.parse(localStorage.getItem('popular'));
 
 fetchPopular().then(data => {
   const popular = data.results;
   const markup = renderMovieCard(popular);
-  list.innerHTML = markup
-  renderModal(popular);
+  list.innerHTML = markup;
+  // renderModal(popular);
 });
-
-
 
 // Cлушатели
 document.addEventListener('submit', onFormSubmit);
 function onFormSubmit(e) {
   e.preventDefault();
   const query = e.target.search.value;
-  addToLocalStorage(searchMovie, fetchGenres, query)
+  addToLocalStorage(searchMovie, fetchGenres, query);
   searchMovie(query).then(data => {
     const length = data.results.length;
     if (length === 0) {
@@ -46,10 +41,9 @@ function onFormSubmit(e) {
       warning.classList.add('hidden');
       const movies = data.results;
       const markup = renderMovieCard(movies);
-      list.innerHTML = markup
-      renderModal(movies);
+      list.innerHTML = markup;
+      // renderModal(movies);
     }
   });
 }
-
-
+renderModal();
