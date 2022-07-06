@@ -1,6 +1,7 @@
 import './js/Crew/crew-list';
 import './js/scroll-up';
 import './sass/main.scss';
+import './js/theme-switcher';
 import { renderMovieCard } from './js/renderMovieCard';
 import { renderModal } from './js/modal_close';
 
