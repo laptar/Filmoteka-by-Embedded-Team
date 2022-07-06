@@ -105,3 +105,6 @@ dist
 .DS_Store
 src/.DS_Store
 *.mdb
+.parcel-cache/data.mdb
+.parcel-cache/fb9b58fa249c786d
+.parcel-cache/46a299ffa433399a
