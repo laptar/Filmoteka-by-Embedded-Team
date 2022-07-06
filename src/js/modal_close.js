@@ -1,4 +1,4 @@
-function renderModal(arr) {
+function renderModal() {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
 
@@ -9,9 +9,11 @@ function renderModal(arr) {
   refs.openModalBtn.addEventListener('click', toggleModalOpen);
 
   function toggleModalOpen(event) {
-    console.log(event.target);
+    // console.log(event.target);
 
     if (event.target.nodeName === 'IMG') {
+      console.log(JSON.parse(localStorage.getItem('currentPage')));
+      const arr = JSON.parse(localStorage.getItem('currentPage'));
       const currentMovie = arr.find(
         curentId => String(curentId.id) === event.target.id
       );
@@ -32,7 +34,9 @@ function renderModal(arr) {
             <td class="modale__table-name">Vote/Votes</td>
             <td class="modale__table-about">
               <span class="vote">${currentMovie.vote_average}</span>
-              <span class="modale__table-name">/</span>${currentMovie.vote_count}
+              <span class="modale__table-name">/</span>${
+                currentMovie.vote_count
+              }
             </td>
           </tr>
           <tr class="modale__table-row">
@@ -47,7 +51,9 @@ function renderModal(arr) {
           </tr>
           <tr class="modale__table-row">
             <td class="modale__table-name">Genre</td>
-            <td class="modale__table-about"></td>
+            <td class="modale__table-about">${currentMovie.genre_ids.join(
+              ', '
+            )}</td>
           </tr>
         </tbody>
       </table>
@@ -70,6 +76,17 @@ function renderModal(arr) {
       refs.modal.classList.remove('is-hidden');
       const closeModalBtn = document.querySelector('[data-modal-close]');
       closeModalBtn.addEventListener('click', toggleModal);
+      document.addEventListener('keydown', ev => {
+        refs.modal.classList.add('is-hidden');
+        refs.info.innerHTML = '';
+      });
+      refs.modal.addEventListener('mousedown', evt => {
+        console.dir(evt.target.nodeName);
+        if (evt.target.nodeName === 'SECTION') {
+          refs.modal.classList.add('is-hidden');
+          refs.info.innerHTML = '';
+        }
+      });
     }
   }
   function toggleModal() {
