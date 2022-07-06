@@ -1,13 +1,22 @@
-
-
-function addToLocalStorage(fetch, fetchGenres, movie = "") {
-    fetch(movie).then(data => {
-        localStorage.setItem('popular', JSON.stringify(data.results));
-    });
-
+function addToLocalStorage(fetch, fetchGenres, movie = '') {
+  fetch(movie).then(cards => {
+    // console.log(card.results);
     fetchGenres().then(data => {
-        localStorage.setItem('genres', JSON.stringify(data.genres));
+      const cardGanr = cards.results;
+      cards.results.forEach((card, ind) => {
+        card.genre_ids.forEach((id, indx) => {
+          data.genres.forEach(el => {
+            if (el.id === id) {
+              cardGanr[ind].genre_ids[indx] = el.name;
+            }
+          });
+        });
+      });
+      // console.log(cardGanr);
+
+      localStorage.setItem('currentPage', JSON.stringify(cardGanr));
     });
+  });
 }
 
-export { addToLocalStorage }
+export { addToLocalStorage };
