@@ -1,3 +1,5 @@
+import './js/Crew/crew-list';
+import './js/scroll-up';
 import './sass/main.scss';
 import { renderMovieCard } from './js/renderMovieCard';
 import { renderModal } from './js/modal_close';
@@ -23,5 +25,3 @@ function clickBtnWatch(event) {
   console.log(event.target);
   libList.innerHTML = renderMovieCard(wachedArray);
 }
-import './JS/Crew/crew-list';
-import './JS/scroll-up';

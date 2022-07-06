@@ -10,18 +10,18 @@ function renderModal() {
 
   function toggleModalOpen(event) {
     if (event.target.nodeName === 'IMG') {
-      console.log(JSON.parse(localStorage.getItem('currentPage')));
       const arr = JSON.parse(localStorage.getItem('currentPage'));
       const currentMovie = arr.find(
         curentId => String(curentId.id) === event.target.id
       );
 
       // console.log(currentMovie);
-      let watched = localStorage.getItem('watched')
+      const watched = localStorage.getItem('watched')
         ? JSON.parse(localStorage.getItem('watched'))
         : [];
-      let queue = localStorage.getItem('queue')
-        ? JSON.parse(localStorage.getItem('watched'))
+
+      const queue = localStorage.getItem('queue')
+        ? JSON.parse(localStorage.getItem('queue'))
         : [];
 
       // Додаємо дві змінні 2 обєкта які беремо із локал сторадж, потім кожен розпрсимо, і кожен файндом перебиремо, якщо фільм доданий то в шаблонку вставляємо тернарнік, і міняємо ADD /remuv
@@ -88,7 +88,6 @@ function renderModal() {
         refs.info.innerHTML = '';
       });
       refs.modal.addEventListener('mousedown', evt => {
-        console.dir(evt.target.nodeName);
         if (evt.target.nodeName === 'SECTION') {
           refs.modal.classList.add('is-hidden');
           refs.info.innerHTML = '';
@@ -98,14 +97,13 @@ function renderModal() {
       const queueBtn = document.querySelector('.modal__button-queue');
       watchedBtn.addEventListener('click', addToWatchList);
       queueBtn.addEventListener('click', addToQueueList);
-      function addToWatchList(movie) {
-        console.log(movie);
+      function addToWatchList() {
         if (!watched.find(item => item.id === currentMovie.id)) {
           watched.push(currentMovie);
           localStorage.setItem('watched', JSON.stringify(watched));
         }
       }
-      function addToQueueList(film) {
+      function addToQueueList() {
         if (!queue.find(item => item.id === currentMovie.id)) {
           queue.push(currentMovie);
           localStorage.setItem('queue', JSON.stringify(queue));
