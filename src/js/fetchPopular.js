@@ -4,7 +4,7 @@ const MEDIA_TYPE = 'movie';
 const TIME_WINDOW = 'day';
 let page = 1;
 
-export default function fetchPopular() {
+function fetchPopular() {
   return fetch(
     `${API_URL_TRENDING}${MEDIA_TYPE}/${TIME_WINDOW}?api_key=${API_KEY}&page=${page}`
   ).then(response => {
@@ -12,9 +12,14 @@ export default function fetchPopular() {
   });
 }
 
-// Функция добавляет популярные фильмы  в локальное хранилище
-fetchPopular().then(data => {
-  localStorage.setItem('popular', JSON.stringify(data));
-});
 
-const popularFilmsArray = JSON.parse(localStorage.getItem('popular'));
+// Функция добавляет популярные фильмы  в локальное хранилище
+
+// function addPopularToLocalStorage(){
+//   fetchPopular().then(data => {
+//     localStorage.setItem('popular', JSON.stringify(data));
+//   });
+// }
+
+
+export { fetchPopular }

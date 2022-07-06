@@ -15,7 +15,7 @@ function renderModal(arr) {
       const currentMovie = arr.find(
         curentId => String(curentId.id) === event.target.id
       );
-      // ДОдаємо дві змінні 2 обєкта які беремо із локал сторадж, потім кожен розпрсимо, і кожен файндом перебиремо, якщо фільм доданий то в шаблонку вставляємо ернарнік, і міняємо ADD /remuv
+      // Додаємо дві змінні 2 обєкта які беремо із локал сторадж, потім кожен розпрсимо, і кожен файндом перебиремо, якщо фільм доданий то в шаблонку вставляємо тернарнік, і міняємо ADD /remuv
       const modalRender = `
       <button type="button" class="modal__button-close" data-modal-close></button>
     <div class="modal__image">
