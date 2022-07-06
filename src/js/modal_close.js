@@ -1,4 +1,4 @@
-function renderModal() {
+function renderModal(nameStor) {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
 
@@ -10,19 +10,13 @@ function renderModal() {
 
   function toggleModalOpen(event) {
     if (event.target.nodeName === 'IMG') {
-      console.log(JSON.parse(localStorage.getItem('currentPage')));
-      const arr = JSON.parse(localStorage.getItem('currentPage'));
+      // console.log(JSON.parse(localStorage.getItem('currentPage')));
+      const arr = JSON.parse(localStorage.getItem(nameStor));
       const currentMovie = arr.find(
         curentId => String(curentId.id) === event.target.id
       );
 
       // console.log(currentMovie);
-      let watched = localStorage.getItem('watched')
-        ? JSON.parse(localStorage.getItem('watched'))
-        : [];
-      let queue = localStorage.getItem('queue')
-        ? JSON.parse(localStorage.getItem('watched'))
-        : [];
 
       // Додаємо дві змінні 2 обєкта які беремо із локал сторадж, потім кожен розпрсимо, і кожен файндом перебиремо, якщо фільм доданий то в шаблонку вставляємо тернарнік, і міняємо ADD /remuv
       const modalRender = `
@@ -83,34 +77,75 @@ function renderModal() {
       refs.modal.classList.remove('is-hidden');
       const closeModalBtn = document.querySelector('[data-modal-close]');
       closeModalBtn.addEventListener('click', toggleModal);
+      // Змінні кнопок модалки
+      const watchedBtn = document.querySelector('.modal__button-watched');
+      const queueBtn = document.querySelector('.modal__button-queue');
+      // Провірка чи є щось в локал сторедж
+      let watched = localStorage.getItem('watched')
+        ? JSON.parse(localStorage.getItem('watched'))
+        : [];
+      let queue = localStorage.getItem('queue')
+        ? JSON.parse(localStorage.getItem('queue'))
+        : [];
+
+      //----
+      // Кнопка додавання та видалення з вотч
+
+      const idInW = String(watched.map(el => el.id));
+      if (idInW.includes(event.target.id)) {
+        watchedBtn.textContent = 'REMUVE WATCH';
+        watchedBtn.addEventListener('click', remuveWatch);
+        function remuveWatch() {
+          watched = watched.filter(el => String(el.id) !== event.target.id);
+          localStorage.setItem('watched', JSON.stringify(watched));
+          toggleModal();
+        }
+      } else {
+        watchedBtn.addEventListener('click', addToWatchList);
+        function addToWatchList() {
+          if (!watched.find(item => item.id === currentMovie.id)) {
+            watched.push(currentMovie);
+            localStorage.setItem('watched', JSON.stringify(watched));
+            toggleModal();
+          }
+        }
+      }
+
+      // ----
+      // Кнопка додавання та видалення з кювеє
+
+      const idInQ = String(queue.map(el => el.id));
+      if (idInQ.includes(event.target.id)) {
+        queueBtn.textContent = 'REMUVE QUEUE';
+        queueBtn.addEventListener('click', remuveWatch);
+        function remuveWatch() {
+          queue = queue.filter(el => String(el.id) !== event.target.id);
+          localStorage.setItem('queue', JSON.stringify(queue));
+          toggleModal();
+        }
+      } else {
+        queueBtn.textContent = 'ADD TO QUEUE';
+        queueBtn.addEventListener('click', addToQueueList);
+        function addToQueueList() {
+          if (!queue.find(item => item.id === currentMovie.id)) {
+            queue.push(currentMovie);
+            localStorage.setItem('queue', JSON.stringify(queue));
+            toggleModal();
+          }
+        }
+      }
+
+      // ----
       document.addEventListener('keydown', ev => {
         refs.modal.classList.add('is-hidden');
         refs.info.innerHTML = '';
       });
       refs.modal.addEventListener('mousedown', evt => {
-        console.dir(evt.target.nodeName);
         if (evt.target.nodeName === 'SECTION') {
           refs.modal.classList.add('is-hidden');
           refs.info.innerHTML = '';
         }
       });
-      const watchedBtn = document.querySelector('.modal__button-watched');
-      const queueBtn = document.querySelector('.modal__button-queue');
-      watchedBtn.addEventListener('click', addToWatchList);
-      queueBtn.addEventListener('click', addToQueueList);
-      function addToWatchList(movie) {
-        console.log(movie);
-        if (!watched.find(item => item.id === currentMovie.id)) {
-          watched.push(currentMovie);
-          localStorage.setItem('watched', JSON.stringify(watched));
-        }
-      }
-      function addToQueueList(film) {
-        if (!queue.find(item => item.id === currentMovie.id)) {
-          queue.push(currentMovie);
-          localStorage.setItem('queue', JSON.stringify(queue));
-        }
-      }
     }
   }
   function toggleModal() {

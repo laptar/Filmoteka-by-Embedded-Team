@@ -1,4 +1,4 @@
-import './JS/scroll-up';
+import './js/scroll-up';
 import './js/Crew/crew-list';
 import { fetchPopular } from './js/fetchPopular.js';
 import { searchMovie } from './js/searchMovie';
@@ -87,7 +87,7 @@ function renderWeb(page = 1) {
 }
 renderWeb();
 
-renderModal();
+renderModal('currentPage');
 console.log(serchFilm);
 
 export { renderWeb };
