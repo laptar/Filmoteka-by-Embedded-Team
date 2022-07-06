@@ -1,3 +1,4 @@
 import './sass/main.scss';
-import './JS/Crew/crew-list';
-import './JS/scroll-up';
+import './js/Crew/crew-list';
+import './js/scroll-up';
+import './js/theme-switcher';

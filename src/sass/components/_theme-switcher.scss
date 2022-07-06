@@ -1,0 +1,124 @@
+body.light-theme {
+  background-color: #fff;
+  color: #000000;
+}
+
+body.dark-theme {
+  background-color: #333333;
+  color: #ffffff;
+
+  //   & .pagination-button {
+  //     background-color: #333333;
+  //     color: lightgrey;
+  //   }
+  //   & .arrow-right {
+  //     stroke: darkgrey;
+  //   }
+  //   & .pagination--current {
+  //     background-color: $accent-color;
+  //   }
+
+  //   & .card__title {
+  //     color: #cccccc;
+  //   }
+
+  //   & .card__text {
+  //     color: #ff8800;
+  //   }
+  & .credits,
+  & .copyright,
+  & .js-open-modal {
+    color: lightgrey;
+  }
+  //   & .footer-link:hover {
+  //     color: $accent-color;
+  //   }
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 24px;
+  position: absolute;
+  right: 0;
+  top: 180px;
+}
+.theme-switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch-icon {
+  color: currentColor;
+  height: 15px;
+  width: 15px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.switch-control {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 32px;
+  height: 16px;
+  border-radius: 50em;
+  padding: 3px 0;
+}
+
+.switch-toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.switch-track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  user-select: none;
+  background-color: #333;
+  border-radius: inherit;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.switch-marker {
+  position: relative;
+  background-color: #fff;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  transform: translateX(3px);
+  transition: transform 250ms;
+}
+
+.switch-toggle:checked + .switch-track {
+  background-color: #333;
+}
+
+.switch-toggle:checked ~ .switch-marker {
+  transform: translateX(17px);
+}
+
+.theme-switch-toggle:focus + .switch-track,
+.theme-switch-toggle:active + .switch-track {
+  box-shadow: 0 0 0 3px #ff6b08;
+}
+.dark-theme {
+  color: lightgrey;
+  background-color: #222;
+}

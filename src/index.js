@@ -5,6 +5,7 @@ import { searchMovie } from './js/searchMovie';
 import { fetchGenres } from './js/fetchGenres.js';
 import { renderMovieCard } from './js/renderMovieCard';
 import { addToLocalStorage } from './js/addToLocalStorage';
+import './js/theme-switcher';
 import './sass/main.scss';
 
 import { renderCard } from './JS/renderCard';
