@@ -16,14 +16,11 @@ const warning = document.querySelector('.warning');
 //добавляет в локальное хранилище
 
 addToLocalStorage(fetchPopular, fetchGenres);
-const genresArray = JSON.parse(localStorage.getItem('genres'));
-let popularFilmsArray = JSON.parse(localStorage.getItem('popular'));
 
 fetchPopular().then(data => {
   const popular = data.results;
   const markup = renderMovieCard(popular);
   list.innerHTML = markup;
-  // renderModal(popular);
 });
 
 // Cлушатели
@@ -42,7 +39,6 @@ function onFormSubmit(e) {
       const movies = data.results;
       const markup = renderMovieCard(movies);
       list.innerHTML = markup;
-      // renderModal(movies);
     }
   });
 }
