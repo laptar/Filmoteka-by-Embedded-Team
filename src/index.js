@@ -1,4 +1,4 @@
-import './JS/scroll-up';
+import './js/scroll-up';
 import './js/Crew/crew-list';
 import { fetchPopular } from './js/fetchPopular.js';
 import { searchMovie } from './js/searchMovie';
@@ -8,7 +8,7 @@ import { addToLocalStorage } from './js/addToLocalStorage';
 import './js/theme-switcher';
 import './sass/main.scss';
 
-import { renderCard } from './JS/renderCard';
+import { renderCard } from './js/renderCard';
 import { renderModal } from './js/modal_close';
 
 const list = document.querySelector('.gallery__list');
