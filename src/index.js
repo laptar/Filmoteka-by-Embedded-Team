@@ -43,4 +43,4 @@ function onFormSubmit(e) {
     }
   });
 }
-renderModal();
+renderModal('currentPage');

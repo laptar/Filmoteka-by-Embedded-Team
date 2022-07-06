@@ -13,15 +13,17 @@ const queueArray = JSON.parse(localStorage.getItem('queue'));
 renderMovieCard(wachedArray);
 const markup = renderMovieCard(wachedArray);
 libList.innerHTML = markup;
-
+renderModal('watched');
 queue.addEventListener('click', clickBtn);
 
 function clickBtn() {
   libList.innerHTML = renderMovieCard(queueArray);
+  renderModal('queue');
 }
 
 watched.addEventListener('click', clickBtnWatch);
 function clickBtnWatch(event) {
   console.log(event.target);
   libList.innerHTML = renderMovieCard(wachedArray);
+  // renderModal('watched');
 }
