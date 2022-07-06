@@ -23,7 +23,7 @@ $active: #ff001b;
             background-image: $header-gradient, url(../images/Tablet/retina/header-library-tablet@2x.jpeg);
         }
     }
-    @include mq(tablet) {
+    @include mq(desktop) {
         background-image: $header-gradient, url(../images/Desktop/header-library-desktop.jpeg);
         @include mq(retina) {
             background-image: $header-gradient, url(../images/Desktop/retina/header-library-desktop@2x.jpeg);
