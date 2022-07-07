@@ -20,6 +20,7 @@ const Theme = {
 };
 
 const savedTheme = localStorage.getItem('theme');
+console.log(savedTheme);
 switcher.addEventListener('change', event => {
   localStorage.setItem('theme', page.classList);
 });
