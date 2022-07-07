@@ -20,6 +20,8 @@ queue.addEventListener('click', clickBtn);
 function clickBtn() {
   currentList = 'queue';
   libList.innerHTML = renderMovieCard(queueArray);
+  queue.classList.add('btn-active');
+  watched.classList.remove('btn-active');
 }
 
 watched.addEventListener('click', clickBtnWatch);
@@ -27,6 +29,8 @@ function clickBtnWatch(event) {
   currentList = 'watched';
   console.log(event.target);
   libList.innerHTML = renderMovieCard(wachedArray);
+  queue.classList.remove('btn-active');
+  watched.classList.add('btn-active');
 }
 
 libList.addEventListener('click', clickCard);
