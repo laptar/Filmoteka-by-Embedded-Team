@@ -12,7 +12,6 @@ function fetchPopular() {
   });
 }
 
-
 // Функция добавляет популярные фильмы  в локальное хранилище
 
 // function addPopularToLocalStorage(){
@@ -21,5 +20,4 @@ function fetchPopular() {
 //   });
 // }
 
-
-export { fetchPopular }
+export { fetchPopular };
