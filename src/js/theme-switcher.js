@@ -6,24 +6,18 @@ switcher.addEventListener('change', event => {
   if (page.classList.contains('dark-theme')) {
     page.classList.remove('dark-theme');
     page.classList.add('light-theme');
+    localStorage.setItem('theme', 'light-theme');
     changedTheme.classList.remove('dark-theme');
   } else {
     page.classList.remove('light-theme');
     page.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark-theme');
     changedTheme.classList.add('dark-theme');
   }
 });
 
-const Theme = {
-  LIGHT: 'light-theme',
-  DARK: 'dark-theme',
-};
-
 const savedTheme = localStorage.getItem('theme');
 console.log(savedTheme);
-switcher.addEventListener('change', event => {
-  localStorage.setItem('theme', page.classList);
-});
 
 updatedTheme();
 checkboxChecked();
@@ -36,6 +30,7 @@ function updatedTheme() {
 }
 
 function checkboxChecked() {
+  console.log(1);
   if (savedTheme === 'dark-theme') {
     switcher.setAttribute('checked', true);
   }

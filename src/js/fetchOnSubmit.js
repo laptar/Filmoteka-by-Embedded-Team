@@ -5,7 +5,6 @@ const LANG = 'en-US';
 const PAGE = 1;
 const searchInput = document.querySelector('.search-input');
 
-
 function searchMovie(query) {
   fetch(
     `${BASE_URL}query=${query}&api_key=${API_KEY}&language=${LANG}&page=${PAGE}`
@@ -16,4 +15,4 @@ function searchMovie(query) {
   });
 }
 
-export { searchMovie }
+export { searchMovie };
