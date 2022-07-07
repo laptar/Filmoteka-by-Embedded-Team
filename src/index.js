@@ -19,7 +19,6 @@ const warning = document.querySelector('.warning');
 
 addToLocalStorage(fetchPopular, fetchGenres);
 
-
 document.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
