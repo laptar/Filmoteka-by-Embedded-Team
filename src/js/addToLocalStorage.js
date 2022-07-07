@@ -5,10 +5,10 @@ const list = document.querySelector('.gallery__list');
 const warning = document.querySelector('.warning');
 
 function addToLocalStorage(fetch, fetchGenres, page, movie = '') {
-  console.log(page);
+  // console.log(page);
   // console.log(movie);
   fetch(page, movie).then(cards => {
-    console.log(cards.total_pages);
+    // console.log(cards.total_pages);
     fetchGenres().then(data => {
       const cardGanr = cards.results;
       cards.results.forEach((card, ind) => {
