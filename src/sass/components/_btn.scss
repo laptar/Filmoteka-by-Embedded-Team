@@ -1,0 +1,37 @@
+.counter {
+  text-align: center;
+  margin: 30px auto;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  color: orangered;
+}
+
+.btn__list {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --indent: 16px;
+}
+
+.btn__item {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+}
+.btn__arr,
+.btn__dot {
+  font-size: 20px;
+}
+
+.activ-btn {
+  background-color: orangered;
+}

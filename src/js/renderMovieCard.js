@@ -20,10 +20,9 @@ function renderMovieCard(array) {
 
                                 <span class="gallery__film-year">| ${releaseDate}</span></p>
                         </li>`;
+  });
 
-    });
-
-    return markup.join('');
+  return markup.join('');
 }
 
 export { renderMovieCard };

@@ -1,9 +1,14 @@
 import { renderMovieCard } from './renderMovieCard';
+import { counter } from './btn-pag';
+
 const list = document.querySelector('.gallery__list');
 const warning = document.querySelector('.warning');
-function addToLocalStorage(fetch, fetchGenres, movie = '') {
-  fetch(movie).then(cards => {
-    // console.log(card.results);
+
+function addToLocalStorage(fetch, fetchGenres, page, movie = '') {
+  console.log(page);
+  // console.log(movie);
+  fetch(page, movie).then(cards => {
+    console.log(cards.total_pages);
     fetchGenres().then(data => {
       const cardGanr = cards.results;
       cards.results.forEach((card, ind) => {
@@ -15,6 +20,8 @@ function addToLocalStorage(fetch, fetchGenres, movie = '') {
           });
         });
       });
+
+      counter(cards.total_pages, page);
 
       localStorage.setItem('currentPage', JSON.stringify(cardGanr));
       if (cardGanr.length === 0) {
