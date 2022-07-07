@@ -1,5 +1,5 @@
-import './js/scroll-up';
-import './js/Crew/crew-list';
+import './js/scroll-up.js';
+import './js/Crew/crew-list.js';
 import { fetchPopular } from './js/fetchPopular.js';
 import { searchMovie } from './js/searchMovie';
 import { fetchGenres } from './js/fetchGenres.js';
@@ -9,7 +9,7 @@ import './js/theme-switcher';
 import './sass/main.scss';
 
 import { renderCard } from './js/renderCard';
-import { renderModal } from './js/modal_close';
+import { renderModal } from './js/modal.js';
 
 const list = document.querySelector('.gallery__list');
 const form = document.querySelector('.search');
@@ -44,4 +44,8 @@ function onFormSubmit(e) {
     }
   });
 }
-renderModal('currentPage');
+
+list.addEventListener('click', clickHeroCard);
+function clickHeroCard(evt) {
+  renderModal(evt, 'currentPage');
+}
