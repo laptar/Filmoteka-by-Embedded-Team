@@ -3,7 +3,9 @@ function renderModal(event, nameStor) {
     openModalBtn: document.querySelector('[data-modal-open]'),
     modal: document.querySelector('[data-modal]'),
     info: document.querySelector('.modal'),
+    body: document.querySelector('body'),
   };
+  refs.body.classList.add('body-fixed');
   // refs.openModalBtn.addEventListener('click', toggleModalOpen);
   // function toggleModalOpen(event) {
   if (event.target.nodeName === 'IMG') {
@@ -30,8 +32,9 @@ function renderModal(event, nameStor) {
             <td class="modale__table-name">Vote/Votes</td>
             <td class="modale__table-about">
               <span class="vote">${currentMovie.vote_average}</span>
-              <span class="modale__table-name">/</span>${currentMovie.vote_count
-      }
+              <span class="modale__table-name">/</span>${
+                currentMovie.vote_count
+              }
             </td>
           </tr>
           <tr class="modale__table-row">
@@ -46,8 +49,8 @@ function renderModal(event, nameStor) {
           <tr class="modale__table-row">
             <td class="modale__table-name">Genre</td>
             <td class="modale__table-about">${currentMovie.genre_ids.join(
-        ', '
-      )}</td>
+              ', '
+            )}</td>
           </tr>
         </tbody>
       </table>
@@ -69,7 +72,7 @@ function renderModal(event, nameStor) {
     refs.modal.classList.remove('is-hidden');
 
     const closeModalBtn = document.querySelector('[data-modal-close]');
-    console.log(closeModalBtn);
+    // console.log(closeModalBtn);
     closeModalBtn.addEventListener('click', toggleModal);
     // Змінні кнопок модалки
     const watchedBtn = document.querySelector('.modal__button-watched');
@@ -126,10 +129,12 @@ function renderModal(event, nameStor) {
     }
     // ----
     document.addEventListener('keydown', ev => {
+      refs.body.classList.remove('body-fixed');
       refs.modal.classList.add('is-hidden');
       refs.info.innerHTML = '';
     });
     refs.modal.addEventListener('mousedown', evt => {
+      refs.body.classList.remove('body-fixed');
       if (evt.target.nodeName === 'SECTION') {
         refs.modal.classList.add('is-hidden');
         refs.info.innerHTML = '';
@@ -137,6 +142,9 @@ function renderModal(event, nameStor) {
     });
   }
   function toggleModal() {
+    refs.body.classList.remove('body-fixed');
+    // console.log(refs.body);
+
     refs.modal.classList.add('is-hidden');
     refs.info.innerHTML = '';
   }
