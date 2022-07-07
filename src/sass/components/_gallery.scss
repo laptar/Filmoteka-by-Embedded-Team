@@ -75,11 +75,12 @@
 .gsection {
   padding-top: 20px;
   padding-bottom: 20px;
-  height: calc(100vh - 216px - 76px);
+  min-height: calc(100vh - 216px - 112px);
 
   @include mq(tablet) {
     padding-top: 60px;
     padding-bottom: 60px;
+    min-height: calc(100vh - 216px - 77px);
   }
 }
 
