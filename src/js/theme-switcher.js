@@ -1,6 +1,6 @@
 const page = document.querySelector('.page');
 const switcher = document.querySelector('#theme-switch-toggle');
-const changedTheme = document.querySelector('footer');
+const changedTheme = document.querySelector('.footer');
 
 switcher.addEventListener('change', event => {
   if (page.classList.contains('dark-theme')) {
