@@ -1,12 +1,12 @@
 body.light-theme {
   background-color: #fff;
-  color: #000000;
+  color: #545454;
 }
 
 body.dark-theme {
   background-color: #333333;
   color: #ffffff;
-
+  & .gallery__film-title,
   & .credits,
   & .copyright,
   & .js-open-modal {
