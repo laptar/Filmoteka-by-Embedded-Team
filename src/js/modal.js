@@ -4,10 +4,7 @@ function renderModal(event, nameStor) {
     modal: document.querySelector('[data-modal]'),
     info: document.querySelector('.modal'),
   };
-  // refs.openModalBtn.addEventListener('click', toggleModalOpen);
-  // function toggleModalOpen(event) {
   if (event.target.nodeName === 'IMG') {
-    // console.log(JSON.parse(localStorage.getItem('currentPage')));
     const arr = JSON.parse(localStorage.getItem(nameStor));
     const currentMovie = arr.find(
       curentId => String(curentId.id) === event.target.id
