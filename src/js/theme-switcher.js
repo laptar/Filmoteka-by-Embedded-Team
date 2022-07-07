@@ -17,7 +17,7 @@ switcher.addEventListener('change', event => {
 });
 
 const savedTheme = localStorage.getItem('theme');
-console.log(savedTheme);
+// console.log(savedTheme);
 
 updatedTheme();
 checkboxChecked();
@@ -30,7 +30,7 @@ function updatedTheme() {
 }
 
 function checkboxChecked() {
-  console.log(1);
+  // console.log(1);
   if (savedTheme === 'dark-theme') {
     switcher.setAttribute('checked', true);
   }
