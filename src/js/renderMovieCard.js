@@ -10,7 +10,15 @@ function renderMovieCard(array) {
             }" alt="${movie.title}" id="${movie.id}">
                                 <h3 class="gallery__film-title">${movie.title
             }</h3>
-                                <p class="gallery__film-genres">${(movie.genre_ids)}<span class="gallery__film-year">${releaseDate}</span></p>
+                                <p class="gallery__film-genres">${(movie.genre_ids).length >= 3 ?
+                (movie.genre_ids).slice(0, 2).join(', ') + ', Others...'
+                : (movie.genre_ids).join(', ') ? (movie.genre_ids).join(', ')
+                    : 'NO DATA'
+            }
+
+
+
+                                <span class="gallery__film-year">| ${releaseDate}</span></p>
                         </li>`;
 
     });
