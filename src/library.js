@@ -11,20 +11,29 @@ const queue = document.querySelector('.queue');
 const libList = document.querySelector('.gallery-library__list');
 const wachedArray = JSON.parse(localStorage.getItem('watched'));
 const queueArray = JSON.parse(localStorage.getItem('queue'));
-renderMovieCard(wachedArray);
+
 const markup = renderMovieCard(wachedArray);
 libList.innerHTML = markup;
-renderModal('watched');
-queue.addEventListener('click', clickBtn);
+let currentList = 'watched';
 
+queue.addEventListener('click', clickBtn);
 function clickBtn() {
+  currentList = 'queue';
   libList.innerHTML = renderMovieCard(queueArray);
-  renderModal('queue');
 }
 
 watched.addEventListener('click', clickBtnWatch);
 function clickBtnWatch(event) {
+  currentList = 'watched';
   console.log(event.target);
   libList.innerHTML = renderMovieCard(wachedArray);
-  // renderModal('watched');
+}
+
+libList.addEventListener('click', clickCard);
+function clickCard(evt) {
+  if (currentList === 'watched') {
+    renderModal(evt, 'watched');
+  } else {
+    renderModal(evt, 'queue');
+  }
 }
