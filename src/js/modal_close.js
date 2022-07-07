@@ -30,9 +30,8 @@ function renderModal(nameStor) {
             <td class="modale__table-name">Vote/Votes</td>
             <td class="modale__table-about">
               <span class="vote">${currentMovie.vote_average}</span>
-              <span class="modale__table-name">/</span>${
-                currentMovie.vote_count
-              }
+              <span class="modale__table-name">/</span>${currentMovie.vote_count
+        }
             </td>
           </tr>
           <tr class="modale__table-row">
@@ -47,8 +46,8 @@ function renderModal(nameStor) {
           <tr class="modale__table-row">
             <td class="modale__table-name">Genre</td>
             <td class="modale__table-about">${currentMovie.genre_ids.join(
-              ', '
-            )}</td>
+          ', '
+        )}</td>
           </tr>
         </tbody>
       </table>
@@ -59,7 +58,7 @@ function renderModal(nameStor) {
           type="button"
           class="modal__button-watched modal__button-text"
         >
-          add to Watched
+          add to watched
         </button>
         <button type="button" class="modal__button-queue modal__button-text">
           add to queue
@@ -84,7 +83,7 @@ function renderModal(nameStor) {
       // Кнопка додавання та видалення з вотч
       const idInW = String(watched.map(el => el.id));
       if (idInW.includes(event.target.id)) {
-        watchedBtn.textContent = 'REMUVE WATCH';
+        watchedBtn.textContent = 'remove from watched';
         watchedBtn.addEventListener('click', remuveWatch);
         function remuveWatch() {
           watched = watched.filter(el => String(el.id) !== event.target.id);
@@ -105,7 +104,7 @@ function renderModal(nameStor) {
       // Кнопка додавання та видалення з кювеє
       const idInQ = String(queue.map(el => el.id));
       if (idInQ.includes(event.target.id)) {
-        queueBtn.textContent = 'REMUVE QUEUE';
+        queueBtn.textContent = 'remove from queued';
         queueBtn.addEventListener('click', remuveWatch);
         function remuveWatch() {
           queue = queue.filter(el => String(el.id) !== event.target.id);

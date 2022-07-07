@@ -19,29 +19,12 @@ const warning = document.querySelector('.warning');
 
 addToLocalStorage(fetchPopular, fetchGenres);
 
-fetchPopular().then(data => {
-  const popular = data.results;
-  const markup = renderMovieCard(popular);
-  list.innerHTML = markup;
-});
 
-// Cлушатели
 document.addEventListener('submit', onFormSubmit);
+
 function onFormSubmit(e) {
   e.preventDefault();
   const query = e.target.search.value;
   addToLocalStorage(searchMovie, fetchGenres, query);
-  searchMovie(query).then(data => {
-    const length = data.results.length;
-    if (length === 0) {
-      warning.classList.remove('hidden');
-      form.reset();
-    } else {
-      warning.classList.add('hidden');
-      const movies = data.results;
-      const markup = renderMovieCard(movies);
-      list.innerHTML = markup;
-    }
-  });
 }
 renderModal('currentPage');
