@@ -30,9 +30,8 @@ function renderModal(event, nameStor) {
             <td class="modale__table-name">Vote/Votes</td>
             <td class="modale__table-about">
               <span class="vote">${currentMovie.vote_average}</span>
-              <span class="modale__table-name">/</span>${
-                currentMovie.vote_count
-              }
+              <span class="modale__table-name">/</span>${currentMovie.vote_count
+      }
             </td>
           </tr>
           <tr class="modale__table-row">
@@ -47,8 +46,8 @@ function renderModal(event, nameStor) {
           <tr class="modale__table-row">
             <td class="modale__table-name">Genre</td>
             <td class="modale__table-about">${currentMovie.genre_ids.join(
-              ', '
-            )}</td>
+        ', '
+      )}</td>
           </tr>
         </tbody>
       </table>
@@ -59,7 +58,7 @@ function renderModal(event, nameStor) {
           type="button"
           class="modal__button-watched modal__button-text"
         >
-          add to Watched
+          add to watched
         </button>
         <button type="button" class="modal__button-queue modal__button-text">
           add to queue

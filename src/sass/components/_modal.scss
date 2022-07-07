@@ -27,7 +27,6 @@
   font-family: 'Roboto';
   font-style: normal;
   text-align: left;
-  margin-top: 20px;
   position: absolute;
   padding-top: 50px;
   padding-bottom: 40px;
@@ -45,7 +44,6 @@
     padding-top: 40px;
     padding-left: 36px;
     padding-bottom: 40px;
-    justify-content: baseline;
   }
   @include mq(desktop) {
     width: 806px;
@@ -108,15 +106,13 @@
 }
 
 .modal-info {
-  display: block;
-
   @include mq(tablet) {
     margin-top: 0;
     width: 264px;
   }
   @include mq(desktop) {
     margin-top: 0;
-    max-width: 391px;
+    width: 391px;
   }
 }
 
@@ -124,9 +120,11 @@
   font-size: 20px;
   line-height: 23px;
   text-transform: uppercase;
+
   @include mq(desktop) {
     font-size: 30px;
     line-height: 35px;
+    font-weight: 500;
   }
 }
 .modale_table {
@@ -141,6 +139,7 @@
   font-size: 12px;
   line-height: 16px;
   color: #8c8c8c;
+  width: 152px;
 }
 
 .vote {
