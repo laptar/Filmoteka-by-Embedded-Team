@@ -4,7 +4,7 @@ const MEDIA_TYPE = 'movie';
 const TIME_WINDOW = 'day';
 // let page = 1;
 
-function fetchPopular(page) {
+function fetchPopular(page = 1) {
   return fetch(
     `${API_URL_TRENDING}${MEDIA_TYPE}/${TIME_WINDOW}?api_key=${API_KEY}&page=${page}`
   ).then(response => {

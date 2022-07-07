@@ -9,9 +9,7 @@ function searchMovie(page = 1, query) {
   fetch(
     `${BASE_URL}query=${query}&api_key=${API_KEY}&language=${LANG}&page=${page}`
   ).then(response => {
-    return response.json().then(data => {
-      console.log(data);
-    });
+    return response.json().then(data => {});
   });
 }
 
