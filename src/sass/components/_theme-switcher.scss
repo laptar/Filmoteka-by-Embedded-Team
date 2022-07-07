@@ -7,32 +7,11 @@ body.dark-theme {
   background-color: #333333;
   color: #ffffff;
 
-  //   & .pagination-button {
-  //     background-color: #333333;
-  //     color: lightgrey;
-  //   }
-  //   & .arrow-right {
-  //     stroke: darkgrey;
-  //   }
-  //   & .pagination--current {
-  //     background-color: $accent-color;
-  //   }
-
-  //   & .card__title {
-  //     color: #cccccc;
-  //   }
-
-  //   & .card__text {
-  //     color: #ff8800;
-  //   }
   & .credits,
   & .copyright,
   & .js-open-modal {
     color: lightgrey;
   }
-  //   & .footer-link:hover {
-  //     color: $accent-color;
-  //   }
 }
 
 .toolbar {
@@ -114,11 +93,11 @@ body.dark-theme {
   transform: translateX(17px);
 }
 
-.theme-switch-toggle:focus + .switch-track,
-.theme-switch-toggle:active + .switch-track {
-  box-shadow: 0 0 0 3px #ff6b08;
+.switch-toggle:focus + .switch-track,
+.switch-toggle:active + .switch-track {
+  box-shadow: 0 0 0 3px #ff001b;
 }
 .dark-theme {
-  color: lightgrey;
+  color: #d3d3d3;
   background-color: #222;
 }
