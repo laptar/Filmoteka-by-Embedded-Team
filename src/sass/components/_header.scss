@@ -1,48 +1,54 @@
+$header-gradient: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56));
+// effects
+$shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$transition: 700ms cubic-bezier(0.4, 0, 0.2, 1);
+// colors
+$white: #ffffff;
+$accent: #ff6b08;
+$active: #ff001b;
 .logo {
   position: absolute;
   top: 46px;
-  @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: baseline;
-  }
   text-decoration: none;
   color: #818181;
   cursor: pointer;
 }
 
 .logo-icon {
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     margin-right: 10px;
   }
 }
-.icon-film {
+
+.logo-icon {
   width: 24px;
   height: 24px;
   animation: tada;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-
+  stroke: $white;
   &:hover,
   &:focus {
-    color: #ff001b;
+    stroke: #ff0019aa;
     animation-play-state: paused;
   }
 }
 
 .logo-title {
-  @media screen and (min-width: (768px - 1)) {
-    display: none;
-  }
+  display: none;
+
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 30px;
   line-height: 1.16;
   color: #ffffff;
+
+  @include mq(tablet) {
+    display: inline-block;
+  }
 }
 
 .site-nav {
-  display: flex;
-  justify-content: flex-end;
   margin-bottom: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -63,7 +69,7 @@
   color: inherit;
 }
 
-.site-nav__link--current {
+.header__navlink--active {
   position: relative;
   &::after {
     content: '';
@@ -76,75 +82,55 @@
   }
 }
 
-.header-section {
-  padding-top: 58px;
-}
-
 .header-background {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  min-height: 230px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(/src/images/Mobile/abstract-background-with-red-lines\ 1.jpg);
-  background-color: #000000;
-  background-position: center;
+  background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  @media screen and (max-width: (768px - 1)) and (min-device-pixel-ratio: 2),
-    screen and (max-width: (768px - 1)) and (min-resolution: 192dpi),
-    screen and (max-width: (768px - 1)) and (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(/src/images/Mobile/retina/abstract-background-with-red-lines\ 1@2x.png);
+  box-shadow: $shadow;
+  background-image: $header-gradient,
+    url(../images/Mobile/abstract-background-with-red-lines\ 1.jpg);
+  @include mq(retina) {
+    background-image: $header-gradient,
+      url(../images/Mobile/retina/abstract-background-with-red-lines\ 1@2x.png);
   }
-  @media screen and (min-width: 768px) {
-    max-width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(/src/images/Tablet/abstract-background-with-red-lines\ 1.jpg);
-    @media screen and (max-width: ( 1280px - 1)) and (min-device-pixel-ratio: 2),
-      screen and (max-width: ( 1280px - 1)) and (min-resolution: 192dpi),
-      screen and (max-width: ( 1280px - 1)) and (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          rgba(0, 0, 0, 0.56),
-          rgba(0, 0, 0, 0.56)
-        ),
-        url(/src/images/Tablet/retina/abstract-background-with-red-lines\ 1@2x.jpg);
+  @include mq(tablet) {
+    background-image: $header-gradient,
+      url(../images/Tablet/abstract-background-with-red-lines\ 1.jpg);
+    @include mq(retina) {
+      background-image: $header-gradient,
+        url(../images/Tablet/retina/abstract-background-with-red-lines\ 1@2x.jpg);
     }
   }
-  @media screen and (min-width: 1280px) {
-    max-width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(/src/images/Desktop/abstract-background-with-red-lines\ 1.jpg);
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          rgba(0, 0, 0, 0.56),
-          rgba(0, 0, 0, 0.56)
-        ),
-        url(/src/images/Desktop/retina/abstract-background-with-red-lines\ 1@2x.jpg);
+  @include mq(desktop) {
+    background-image: $header-gradient,
+      url(../images/Desktop/abstract-background-with-red-lines\ 1.jpg);
+    @include mq(retina) {
+      background-image: $header-gradient,
+        url(../images/Desktop/retina/abstract-background-with-red-lines\ 1@2x.jpg);
     }
   }
 }
 
 .search {
-  position: relative;
-  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .search-input {
-  width: 100%;
+  width: 280px;
   font-size: 14px;
   line-height: 1.14;
-  @media screen and (min-width: 768px) {
-    width: 336px;
-  }
+  position: relative;
   background-color: transparent;
   border: transparent;
   border-bottom: 1px solid #ffffff;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   transition: border-bottom, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+  &::placeholder {
+    color: #ffffff;
+    transition: color, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+  }
   &::placeholder {
     color: #ffffff;
     transition: color, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
@@ -156,17 +142,31 @@
       color: #ff001b;
     }
   }
+
+  @include mq(tablet) {
+    width: 336px;
+  }
+
+  @include mq(desktop) {
+    width: 394px;
+  }
+}
+
+#search {
+  position: relative;
 }
 
 .search-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  width: 20px;
+  height: 20px;
+  right: 2px;
   @media screen and (min-width: 768px) {
-    right: 185px;
+    right: 0px;
   }
   @media screen and (min-width: 1280px) {
-    right: 310px;
+    right: 0px;
+    bottom: 3px;
   }
   padding: 0;
   background-color: transparent;
@@ -179,21 +179,11 @@
 }
 
 .header-warning {
-  position: absolute;
-  top: 155px;
+  z-index: 200;
+  margin-top: 20px;
+  text-align: center;
   font-size: 14px;
   line-height: 1.14;
-  @media screen and (max-width: (768px - 1)) {
-    max-width: (480px - 40);
-  }
-  @media screen and (min-width: 768px) {
-    width: (768px - 152);
-    text-align: center;
-  }
-  @media screen and (min-width: 1280px) {
-    width: (1280px - 142);
-    text-align: center;
-  }
   color: #ff001b;
 }
 
@@ -203,14 +193,12 @@
     -ms-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
   10%,
   20% {
     -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
     -ms-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
   }
-
   30%,
   50%,
   70%,
@@ -219,7 +207,6 @@
     -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
-
   40%,
   60%,
   80% {
@@ -227,10 +214,46 @@
     -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
-
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     -ms-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
+}
+
+.header__section {
+  padding-top: 40px;
+  padding-bottom: 44px;
+  height: 216px;
+}
+
+.header__container {
+  padding: 0px 32px 0px 32px;
+  text-align: center;
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 41px;
+}
+
+.header__logo {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.header__navlist {
+  display: flex;
+  gap: 39px;
+}
+
+.header__navlink {
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
+  text-transform: uppercase;
 }

@@ -10,25 +10,43 @@ import './sass/main.scss';
 
 import { renderCard } from './js/renderCard';
 import { renderModal } from './js/modal.js';
-
+import { counter, clickCounter } from './js/btn-pag';
+const btnList = document.querySelector('.btn__list');
 const list = document.querySelector('.gallery__list');
 const form = document.querySelector('.search');
 const warning = document.querySelector('.warning');
+const counterPage = document.querySelector('.counter');
 
-//добавляет в локальное хранилище
-
-addToLocalStorage(fetchPopular, fetchGenres);
-
-
+let currentPage = 1;
+let query = '';
+// console.log(Number(counterPage.textContent));
+// addToLocalStorage(fetchPopular, fetchGenres);
 document.addEventListener('submit', onFormSubmit);
-
 function onFormSubmit(e) {
   e.preventDefault();
-  const query = e.target.search.value;
-  addToLocalStorage(searchMovie, fetchGenres, query);
+  query = e.target.search.value;
+  addToLocalStorage(searchMovie, fetchGenres, currentPage, query);
+}
+
+if (!query) {
+  addToLocalStorage(fetchPopular, fetchGenres, currentPage);
+} else {
+  addToLocalStorage(searchMovie, fetchGenres, currentPage, query);
 }
 
 list.addEventListener('click', clickHeroCard);
 function clickHeroCard(evt) {
   renderModal(evt, 'currentPage');
+}
+
+btnList.addEventListener('click', onClick);
+function onClick(evt) {
+  // currentPage = Number(counterPage.textContent);
+  currentPage = clickCounter(evt, currentPage);
+  console.log(currentPage);
+  if (!query) {
+    addToLocalStorage(fetchPopular, fetchGenres, currentPage);
+  } else {
+    addToLocalStorage(searchMovie, fetchGenres, currentPage, query);
+  }
 }

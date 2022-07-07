@@ -3,7 +3,11 @@ function renderModal(event, nameStor) {
     openModalBtn: document.querySelector('[data-modal-open]'),
     modal: document.querySelector('[data-modal]'),
     info: document.querySelector('.modal'),
+    body: document.querySelector('body'),
   };
+  refs.body.classList.add('body-fixed');
+  // refs.openModalBtn.addEventListener('click', toggleModalOpen);
+  // function toggleModalOpen(event) {
   if (event.target.nodeName === 'IMG') {
     const arr = JSON.parse(localStorage.getItem(nameStor));
     const currentMovie = arr.find(
@@ -138,10 +142,12 @@ function renderModal(event, nameStor) {
 
     // ----
     document.addEventListener('keydown', ev => {
+      refs.body.classList.remove('body-fixed');
       refs.modal.classList.add('is-hidden');
       refs.info.innerHTML = '';
     });
     refs.modal.addEventListener('mousedown', evt => {
+      refs.body.classList.remove('body-fixed');
       if (evt.target.nodeName === 'SECTION') {
         refs.modal.classList.add('is-hidden');
         refs.info.innerHTML = '';
@@ -173,6 +179,9 @@ function renderModal(event, nameStor) {
     }
   }
   function toggleModal() {
+    refs.body.classList.remove('body-fixed');
+    // console.log(refs.body);
+
     refs.modal.classList.add('is-hidden');
     refs.info.innerHTML = '';
   }

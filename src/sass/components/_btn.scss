@@ -1,0 +1,53 @@
+.counter {
+  text-align: center;
+  margin: 30px auto;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  color: orangered;
+  display: none;
+}
+
+.btn__list {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --indent: 16px;
+}
+
+.btn__item {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+}
+.btn__arr,
+.btn__dot {
+  font-size: 20px;
+}
+.neuromorphism {
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  transition: transform 250ms linear;
+  transform-origin: center;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.activ-btn {
+  background-color: orangered;
+  transform: scale(1.2);
+}
+
+#left_dot_btn,
+#right_dot_btn {
+  background-color: transparent;
+}

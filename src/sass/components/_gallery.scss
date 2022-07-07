@@ -57,6 +57,7 @@
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
+  color: black;
 
   @include mq(desktop) {
     font-size: 20px;
@@ -74,10 +75,12 @@
 .gsection {
   padding-top: 20px;
   padding-bottom: 20px;
+  min-height: calc(100vh - 216px - 112px);
 
   @include mq(tablet) {
     padding-top: 60px;
     padding-bottom: 60px;
+    min-height: calc(100vh - 216px - 77px);
   }
 }
 
