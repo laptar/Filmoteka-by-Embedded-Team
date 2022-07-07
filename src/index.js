@@ -15,7 +15,8 @@ const list = document.querySelector('.gallery__list');
 const form = document.querySelector('.search');
 const warning = document.querySelector('.warning');
 
-//добавляет в локальное хранилище
+let serchFilm = '';
+let page = 1;
 
 addToLocalStorage(fetchPopular, fetchGenres);
 

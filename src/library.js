@@ -27,8 +27,24 @@ function clickBtnWatch(event) {
   currentList = 'watched';
   console.log(event.target);
   libList.innerHTML = renderMovieCard(wachedArray);
+  renderModal('watched');
+  console.log(carrentPaege);
 }
 
+queue.addEventListener('click', clickBtn);
+function clickBtn() {
+  carrentPaege = 'queue';
+  libList.innerHTML = renderMovieCard(queueArray);
+  renderModal('queue');
+  console.log(carrentPaege);
+}
+
+console.log(carrentPaege);
+if (carrentPaege === 'watched') {
+  renderModal('watched');
+} else {
+  renderModal('queue');
+}
 libList.addEventListener('click', clickCard);
 function clickCard(evt) {
   if (currentList === 'watched') {

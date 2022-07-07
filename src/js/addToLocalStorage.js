@@ -17,7 +17,6 @@ function addToLocalStorage(fetch, fetchGenres, movie = '') {
         });
       });
 
-
       localStorage.setItem('currentPage', JSON.stringify(cardGanr));
       if (cardGanr.length === 0) {
         warning.classList.remove('hidden');
