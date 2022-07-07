@@ -12,8 +12,22 @@ function renderModal(event, nameStor) {
     const currentMovie = arr.find(
       curentId => String(curentId.id) === event.target.id
     );
-    // console.log(currentMovie);
+    console.log(currentMovie);
+
     // Додаємо дві змінні 2 обєкта які беремо із локал сторадж, потім кожен розпрсимо, і кожен файндом перебиремо, якщо фільм доданий то в шаблонку вставляємо тернарнік, і міняємо ADD /remuv
+    let watched = localStorage.getItem('watched')
+      ? JSON.parse(localStorage.getItem('watched'))
+      : [];
+
+    let queue = localStorage.getItem('queue')
+      ? JSON.parse(localStorage.getItem('queue'))
+      : [];
+    const isInWatched = watched.some(
+      item => String(item.id) === event.target.id
+    );
+    const isInQueue = queue.some(item => String(item.id) === event.target.id);
+    console.log(isInWatched);
+    console.log(isInQueue);
     const modalRender = `
       <button type="button" class="modal__button-close" data-modal-close></button>
     <div class="modal__image">
@@ -30,8 +44,9 @@ function renderModal(event, nameStor) {
             <td class="modale__table-name">Vote/Votes</td>
             <td class="modale__table-about">
               <span class="vote">${currentMovie.vote_average}</span>
-              <span class="modale__table-name">/</span>${currentMovie.vote_count
-      }
+              <span class="modale__table-name">/</span>${
+                currentMovie.vote_count
+              }
             </td>
           </tr>
           <tr class="modale__table-row">
@@ -46,8 +61,8 @@ function renderModal(event, nameStor) {
           <tr class="modale__table-row">
             <td class="modale__table-name">Genre</td>
             <td class="modale__table-about">${currentMovie.genre_ids.join(
-        ', '
-      )}</td>
+              ', '
+            )}</td>
           </tr>
         </tbody>
       </table>
@@ -57,11 +72,12 @@ function renderModal(event, nameStor) {
         <button
           type="button"
           class="modal__button-watched modal__button-text"
-        >
-          add to watched
+        >${isInWatched ? 'REMUVE WATCH' : 'add to watched'}
+          
         </button>
         <button type="button" class="modal__button-queue modal__button-text">
-          add to queue
+        ${isInQueue ? 'REMUVE QUEUE' : 'add to queue'}
+          
         </button>
       </div>
     </div>`;
@@ -69,28 +85,22 @@ function renderModal(event, nameStor) {
     refs.modal.classList.remove('is-hidden');
 
     const closeModalBtn = document.querySelector('[data-modal-close]');
-    console.log(closeModalBtn);
+    // console.log(closeModalBtn);
     closeModalBtn.addEventListener('click', toggleModal);
     // Змінні кнопок модалки
     const watchedBtn = document.querySelector('.modal__button-watched');
     const queueBtn = document.querySelector('.modal__button-queue');
     // Провірка чи є щось в локал сторедж
-    let watched = localStorage.getItem('watched')
-      ? JSON.parse(localStorage.getItem('watched'))
-      : [];
-    let queue = localStorage.getItem('queue')
-      ? JSON.parse(localStorage.getItem('queue'))
-      : [];
     //----
     // Кнопка додавання та видалення з вотч
     const idInW = String(watched.map(el => el.id));
     if (idInW.includes(event.target.id)) {
-      watchedBtn.textContent = 'REMUVE WATCH';
+      console.log(event.target.id);
       watchedBtn.addEventListener('click', remuveWatch);
       function remuveWatch() {
         watched = watched.filter(el => String(el.id) !== event.target.id);
         localStorage.setItem('watched', JSON.stringify(watched));
-        toggleModal();
+        cangeNameAddWatch();
       }
     } else {
       watchedBtn.addEventListener('click', addToWatchList);
@@ -98,32 +108,37 @@ function renderModal(event, nameStor) {
         if (!watched.find(item => item.id === currentMovie.id)) {
           watched.push(currentMovie);
           localStorage.setItem('watched', JSON.stringify(watched));
-          toggleModal();
+          cangeNameRemWatch();
+          // toggleModal();
+          // watchedBtn.disabled = true;
         }
       }
     }
     // ----
     // Кнопка додавання та видалення з кювеє
     const idInQ = String(queue.map(el => el.id));
+    console.log(idInQ);
     if (idInQ.includes(event.target.id)) {
-      queueBtn.textContent = 'REMUVE QUEUE';
-      queueBtn.addEventListener('click', remuveWatch);
-      function remuveWatch() {
+      queueBtn.addEventListener('click', remuveQueue);
+      function remuveQueue() {
         queue = queue.filter(el => String(el.id) !== event.target.id);
         localStorage.setItem('queue', JSON.stringify(queue));
-        toggleModal();
+        cangeNameAddQueue();
+        // queueBtn.disabled = true;
+        // toggleModal();
       }
     } else {
-      queueBtn.textContent = 'ADD TO QUEUE';
       queueBtn.addEventListener('click', addToQueueList);
       function addToQueueList() {
         if (!queue.find(item => item.id === currentMovie.id)) {
           queue.push(currentMovie);
           localStorage.setItem('queue', JSON.stringify(queue));
-          toggleModal();
+          cangeNameRemQueue();
+          // queueBtn.disabled = true;
         }
       }
     }
+
     // ----
     document.addEventListener('keydown', ev => {
       refs.modal.classList.add('is-hidden');
@@ -135,11 +150,36 @@ function renderModal(event, nameStor) {
         refs.info.innerHTML = '';
       }
     });
+    function cangeNameRemWatch() {
+      console.log('міняю');
+      watchedBtn.textContent = 'REMUVE WATCH';
+      watchedBtn.classList.add('disable');
+      watchedBtn.disabled = true;
+    }
+    function cangeNameRemQueue() {
+      console.log('міняюQue');
+      queueBtn.textContent = 'REMUVE QUEUE';
+      queueBtn.classList.add('disable');
+      queueBtn.disabled = true;
+    }
+    function cangeNameAddQueue() {
+      console.log('міняюADDQue');
+      queueBtn.textContent = 'ADD TO QUEUE';
+      queueBtn.classList.add('accent');
+      queueBtn.disabled = true;
+    }
+    function cangeNameAddWatch() {
+      console.log('міняюADDQue');
+      watchedBtn.textContent = 'ADD TO WATCHED';
+      watchedBtn.classList.add('accent');
+      watchedBtn.disabled = true;
+    }
   }
   function toggleModal() {
     refs.modal.classList.add('is-hidden');
     refs.info.innerHTML = '';
   }
 }
+
 // }
 export { renderModal };
