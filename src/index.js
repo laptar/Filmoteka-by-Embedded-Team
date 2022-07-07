@@ -1,5 +1,5 @@
-import './js/scroll-up';
-import './js/Crew/crew-list';
+import './js/scroll-up.js';
+import './js/Crew/crew-list.js';
 import { fetchPopular } from './js/fetchPopular.js';
 import { searchMovie } from './js/searchMovie';
 import { fetchGenres } from './js/fetchGenres.js';
@@ -9,39 +9,44 @@ import './js/theme-switcher';
 import './sass/main.scss';
 
 import { renderCard } from './js/renderCard';
-import { renderModal } from './js/modal_close';
-
+import { renderModal } from './js/modal.js';
+import { counter, clickCounter } from './js/btn-pag';
+const btnList = document.querySelector('.btn__list');
 const list = document.querySelector('.gallery__list');
 const form = document.querySelector('.search');
 const warning = document.querySelector('.warning');
+const counterPage = document.querySelector('.counter');
 
-//добавляет в локальное хранилище
-
-addToLocalStorage(fetchPopular, fetchGenres);
-
-fetchPopular().then(data => {
-  const popular = data.results;
-  const markup = renderMovieCard(popular);
-  list.innerHTML = markup;
-});
-
-// Cлушатели
+let currentPage = 1;
+let query = '';
+// console.log(Number(counterPage.textContent));
+// addToLocalStorage(fetchPopular, fetchGenres);
 document.addEventListener('submit', onFormSubmit);
 function onFormSubmit(e) {
   e.preventDefault();
-  const query = e.target.search.value;
-  addToLocalStorage(searchMovie, fetchGenres, query);
-  searchMovie(query).then(data => {
-    const length = data.results.length;
-    if (length === 0) {
-      warning.classList.remove('hidden');
-      form.reset();
-    } else {
-      warning.classList.add('hidden');
-      const movies = data.results;
-      const markup = renderMovieCard(movies);
-      list.innerHTML = markup;
-    }
-  });
+  query = e.target.search.value;
+  addToLocalStorage(searchMovie, fetchGenres, currentPage, query);
 }
-renderModal('currentPage');
+
+if (!query) {
+  addToLocalStorage(fetchPopular, fetchGenres, currentPage);
+} else {
+  addToLocalStorage(searchMovie, fetchGenres, currentPage, query);
+}
+
+list.addEventListener('click', clickHeroCard);
+function clickHeroCard(evt) {
+  renderModal(evt, 'currentPage');
+}
+
+btnList.addEventListener('click', onClick);
+function onClick(evt) {
+  // currentPage = Number(counterPage.textContent);
+  currentPage = clickCounter(evt, currentPage);
+  console.log(currentPage);
+  if (!query) {
+    addToLocalStorage(fetchPopular, fetchGenres, currentPage);
+  } else {
+    addToLocalStorage(searchMovie, fetchGenres, currentPage, query);
+  }
+}

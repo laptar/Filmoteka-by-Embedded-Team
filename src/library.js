@@ -1,9 +1,9 @@
 import './js/Crew/crew-list';
-import './js/scroll-up';
+import './js/scroll-up.js';
 import './sass/main.scss';
 import './js/theme-switcher';
-import { renderMovieCard } from './js/renderMovieCard';
-import { renderModal } from './js/modal_close';
+import { renderMovieCard } from './js/renderMovieCard.js';
+import { renderModal } from './js/modal.js';
 
 const watched = document.querySelector('.watched');
 const queue = document.querySelector('.queue');
