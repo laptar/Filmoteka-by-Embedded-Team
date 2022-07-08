@@ -12,13 +12,26 @@ function renderModal(event, nameStor) {
   // refs.openModalBtn.addEventListener('click', toggleModalOpen);
   // function toggleModalOpen(event) {
   if (event.target.nodeName === 'IMG') {
-    // console.log(JSON.parse(localStorage.getItem('currentPage')));
     const arr = JSON.parse(localStorage.getItem(nameStor));
     const currentMovie = arr.find(
       curentId => String(curentId.id) === event.target.id
     );
-    // console.log(currentMovie);
+    console.log(currentMovie);
+
     // Додаємо дві змінні 2 обєкта які беремо із локал сторадж, потім кожен розпрсимо, і кожен файндом перебиремо, якщо фільм доданий то в шаблонку вставляємо тернарнік, і міняємо ADD /remuv
+    let watched = localStorage.getItem('watched')
+      ? JSON.parse(localStorage.getItem('watched'))
+      : [];
+
+    let queue = localStorage.getItem('queue')
+      ? JSON.parse(localStorage.getItem('queue'))
+      : [];
+    const isInWatched = watched.some(
+      item => String(item.id) === event.target.id
+    );
+    const isInQueue = queue.some(item => String(item.id) === event.target.id);
+    console.log(isInWatched);
+    console.log(isInQueue);
     const modalRender = `
       <button type="button" class="modal__button-close" data-modal-close></button>
     <div class="modal__image">
@@ -63,11 +76,12 @@ function renderModal(event, nameStor) {
         <button
           type="button"
           class="modal__button-watched modal__button-text"
-        >
-          add to watched
+        >${isInWatched ? 'REMUVE WATCH' : 'add to watched'}
+          
         </button>
         <button type="button" class="modal__button-queue modal__button-text">
-          add to queue
+        ${isInQueue ? 'REMUVE QUEUE' : 'add to queue'}
+          
         </button>
       </div>
     </div>`;
@@ -81,17 +95,11 @@ function renderModal(event, nameStor) {
     const watchedBtn = document.querySelector('.modal__button-watched');
     const queueBtn = document.querySelector('.modal__button-queue');
     // Провірка чи є щось в локал сторедж
-    let watched = localStorage.getItem('watched')
-      ? JSON.parse(localStorage.getItem('watched'))
-      : [];
-    let queue = localStorage.getItem('queue')
-      ? JSON.parse(localStorage.getItem('queue'))
-      : [];
     //----
     // Кнопка додавання та видалення з вотч
     const idInW = String(watched.map(el => el.id));
     if (idInW.includes(event.target.id)) {
-      watchedBtn.textContent = 'REMUVE WATCH';
+      console.log(event.target.id);
       watchedBtn.addEventListener('click', remuveWatch);
       function remuveWatch() {
         watched = watched.filter(el => String(el.id) !== event.target.id);
@@ -107,24 +115,29 @@ function renderModal(event, nameStor) {
           localStorage.setItem('watched', JSON.stringify(watched));
           libList.innerHTML = renderMovieCard(watched);
           toggleModal();
+          cangeNameRemWatch();
+          // toggleModal();
+          // watchedBtn.disabled = true;
         }
       }
     }
     // ----
     // Кнопка додавання та видалення з кювеє
     const idInQ = String(queue.map(el => el.id));
+    console.log(idInQ);
     if (idInQ.includes(event.target.id)) {
-      queueBtn.textContent = 'REMUVE QUEUE';
-      queueBtn.addEventListener('click', remuveWatch);
-      function remuveWatch() {
+      queueBtn.addEventListener('click', remuveQueue);
+      function remuveQueue() {
         queue = queue.filter(el => String(el.id) !== event.target.id);
         localStorage.setItem('queue', JSON.stringify(queue));
         libList.innerHTML = renderMovieCard(queue);
 
         toggleModal();
+        cangeNameAddQueue();
+        // queueBtn.disabled = true;
+        // toggleModal();
       }
     } else {
-      queueBtn.textContent = 'ADD TO QUEUE';
       queueBtn.addEventListener('click', addToQueueList);
       function addToQueueList() {
         if (!queue.find(item => item.id === currentMovie.id)) {
@@ -132,9 +145,12 @@ function renderModal(event, nameStor) {
           localStorage.setItem('queue', JSON.stringify(queue));
           libList.innerHTML = renderMovieCard(queue);
           toggleModal();
+          cangeNameRemQueue();
+          // queueBtn.disabled = true;
         }
       }
     }
+
     // ----
     document.addEventListener('keydown', ev => {
       refs.body.classList.remove('body-fixed');
@@ -148,6 +164,30 @@ function renderModal(event, nameStor) {
         refs.info.innerHTML = '';
       }
     });
+    function cangeNameRemWatch() {
+      console.log('міняю');
+      watchedBtn.textContent = 'REMUVE WATCH';
+      watchedBtn.classList.add('disable');
+      watchedBtn.disabled = true;
+    }
+    function cangeNameRemQueue() {
+      console.log('міняюQue');
+      queueBtn.textContent = 'REMUVE QUEUE';
+      queueBtn.classList.add('disable');
+      queueBtn.disabled = true;
+    }
+    function cangeNameAddQueue() {
+      console.log('міняюADDQue');
+      queueBtn.textContent = 'ADD TO QUEUE';
+      queueBtn.classList.add('accent');
+      queueBtn.disabled = true;
+    }
+    function cangeNameAddWatch() {
+      console.log('міняюADDQue');
+      watchedBtn.textContent = 'ADD TO WATCHED';
+      watchedBtn.classList.add('accent');
+      watchedBtn.disabled = true;
+    }
   }
   function toggleModal() {
     refs.body.classList.remove('body-fixed');
@@ -156,5 +196,6 @@ function renderModal(event, nameStor) {
     refs.info.innerHTML = '';
   }
 }
+
 // }
 export { renderModal };

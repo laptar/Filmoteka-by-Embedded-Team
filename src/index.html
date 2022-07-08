@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filmoteka</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="page">
-    <include src="./partials-index/header.html"></include>
-    <include src="./partials-index/theme-switcher.html"></include>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filmoteka</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body class="page">
+  <div class="wrapper1">
+    <header class="header-background">
+      <include src="./partials-index/header.html"></include>
+    </header>
     <main>
       <include src="./partials-index/hero.html"></include>
     </main>
-    <include src="./partials-index/scroll-up.html"></include>
-    <include src="./partials-index/footer.html"></include>
-    <!--Модальні вікна-->
-    <include src="./partials-index/modal.html"></include>
-    <include src="./partials-index/footer-team.html"></include>
-    <script type="module" src="../node_modules/spin.js/spin.js"></script>
-    <script src="../src/js/modal.js" type="module"></script>
+    <footer class="footer">
+      <include src="./partials-index/scroll-up.html"></include>
+      <include src="./partials-index/footer.html"></include>
+    </footer>
+  </div>
+  <!--Модальні вікна-->
+  <include src="./partials-index/modal.html"></include>
+  <include src="./partials-index/footer-team.html"></include>
+  <script type="module" src="../node_modules/spin.js/spin.js"></script>
+  <script src="../src/js/modal.js" type="module"></script>
 
-    <script src="./index.js" type="module"></script>
-  </body>
+  <script src="./index.js" type="module"></script>
+</body>
+
 </html>
