@@ -1,5 +1,6 @@
 import { renderMovieCard } from './renderMovieCard';
 const libList = document.querySelector('.gallery-library__list');
+const homeList = document.querySelector('.gallery__list');
 
 function renderModal(event, nameStor) {
   const refs = {
@@ -246,6 +247,9 @@ function renderModal(event, nameStor) {
       ? JSON.parse(sessionStorage.getItem('currentList'))
       : 'watched';
     if (!libList) {
+      console.log('ia tut');
+      const currentPage = addArrToLocalStor('currentPage');
+      homeList.innerHTML = renderMovieCard(currentPage);
       return;
     }
     if (currentList === 'watched') {

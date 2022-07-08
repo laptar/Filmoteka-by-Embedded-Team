@@ -1,7 +1,19 @@
+function findInLocStor(id, localStor) {
+  const watchStor = localStorage.getItem(localStor)
+    ? JSON.parse(localStorage.getItem(localStor))
+    : false;
+  if (!watchStor) {
+    return watchStor;
+  } else {
+    return watchStor.find(elm => elm.id === id);
+  }
+}
+
 function renderMovieCard(array) {
   if (array.length === 0) {
     return '<img class="gallery" src="https://c.tenor.com/KOZLvzU0o4kAAAAC/no-results.gif" width="500px" alt=""/>';
   }
+
   const markup = array.map(movie => {
     const releaseDate = movie.release_date.split('-')[0];
     return `<li class="gallery__item">
@@ -11,6 +23,18 @@ function renderMovieCard(array) {
                                       movie.poster_path
                                     : 'https://c.tenor.com/MaKLmuQyh0UAAAAC/vincent-vega-pulp-fiction.gif'
                                 }" alt="${movie.title}" id="${movie.id}">
+        <div class="ico-watched ${
+          findInLocStor(movie.id, 'watched') ? '' : 'visually-hidden'
+        }">
+          <img src="./images/watch.png" alt="" />
+          <p class="ico__text-watched">ON WATCHED</p>
+        </div>
+        <div class="ico-queue ${
+          findInLocStor(movie.id, 'queue') ? '' : 'visually-hidden'
+        }">
+          <img src="./images/queue.svg" alt="" />
+          <p class="ico__text-queue">ON QUEUE</p>
+        </div>
                                 <div class="gallery__wrapper">
                                 <h3 class="gallery__film-title">${
                                   movie.title

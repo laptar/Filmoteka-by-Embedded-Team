@@ -16,7 +16,7 @@
 
   visibility: visible;
   pointer-events: initial;
-  overflow-y: hidden;
+  overflow-y: scroll;
 
   transition-property: opacity, visibility, transform;
   transition-duration: 250ms;
