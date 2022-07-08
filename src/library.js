@@ -7,6 +7,19 @@ import { renderModal } from './js/modal';
 
 const watched = document.querySelector('.watched');
 const queue = document.querySelector('.queue');
+const btnWatched = document.querySelector('.watched-click');
+const btnQueue = document.querySelector('.queue-click');
+btnWatched.addEventListener('click', clickBtnW);
+function clickBtnW() {
+  queue.classList.remove('btn-active');
+  watched.classList.add('btn-active');
+}
+
+btnQueue.addEventListener('click', clickBtnQue);
+function clickBtnQue() {
+  queue.classList.add('btn-active');
+  watched.classList.remove('btn-active');
+}
 
 const libList = document.querySelector('.gallery-library__list');
 
@@ -23,50 +36,70 @@ if (currentList === 'watched') {
   libList.innerHTML = renderMovieCard(queueArray);
 }
 
-// let currentList = 'watched';
-
-if (wachedArray.length === 0) {
-  libList.innerHTML = `<img
-        class="gallery"
-        src="https://c.tenor.com/KOZLvzU0o4kAAAAC/no-results.gif"
-        width="500px"
-        alt=""
-      />`;
-}
-if (queueArray.length === 0) {
-  libList.innerHTML = `<img
-        class="gallery"
-        src="https://c.tenor.com/KOZLvzU0o4kAAAAC/no-results.gif"
-        width="500px"
-        alt=""
-      />`;
-}
-
 queue.addEventListener('click', clickBtn);
 function clickBtn() {
   sessionStorage.setItem('currentList', JSON.stringify('queue'));
   currentList = 'queue';
   queueArray = JSON.parse(localStorage.getItem('queue'));
-  libList.innerHTML = renderMovieCard(queueArray);
-  // queue.classList.add('btn-active');
-  // watched.classList.remove('btn-active');
+  if (queueArray.length === 0) {
+    libList.innerHTML = `<img
+    class="gallery"
+    src="https://c.tenor.com/KOZLvzU0o4kAAAAC/no-results.gif"
+    width="500px"
+    alt=""
+    />`;
+  } else {
+    libList.innerHTML = renderMovieCard(queueArray);
+  }
 }
 
 watched.addEventListener('click', clickBtnWatch);
-function clickBtnWatch() {
-  sessionStorage.setItem('currentList', JSON.stringify('watched'));
-  currentList = 'watched';
-  wachedArray = JSON.parse(localStorage.getItem('watched'));
-  libList.innerHTML = renderMovieCard(wachedArray);
+console.log(currentList);
+if (currentList === 'watched') {
   // queue.classList.remove('btn-active');
   // watched.classList.add('btn-active');
 }
 
+function clickBtnWatch() {
+  sessionStorage.setItem('currentList', JSON.stringify('watched'));
+  currentList = 'watched';
+  wachedArray = JSON.parse(localStorage.getItem('watched'));
+  console.log(wachedArray);
+  if (wachedArray.length === 0) {
+    libList.innerHTML = `<img
+            class="gallery"
+            src="https://c.tenor.com/KOZLvzU0o4kAAAAC/no-results.gif"
+            width="500px"
+            alt=""
+         />`;
+  } else {
+    libList.innerHTML = renderMovieCard(wachedArray);
+  }
+}
+
 libList.addEventListener('click', clickCard);
 function clickCard(evt) {
+  console.log(currentList);
   if (currentList === 'watched') {
     renderModal(evt, 'watched');
   } else {
     renderModal(evt, 'queue');
   }
 }
+
+// if (!wachedArray.length) {
+//   libList.innerHTML = `<img
+//         class="gallery"
+//         src="https://c.tenor.com/KOZLvzU0o4kAAAAC/no-results.gif"
+//         width="500px"
+//         alt=""
+//       />`;
+// }
+// if (!queueArray.length) {
+//   libList.innerHTML = `<img
+//         class="gallery"
+//         src="https://c.tenor.com/KOZLvzU0o4kAAAAC/no-results.gif"
+//         width="500px"
+//         alt=""
+//       />`;
+// }
