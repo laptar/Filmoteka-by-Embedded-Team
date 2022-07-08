@@ -180,12 +180,12 @@
   transform: scale(1);
 
   &:hover {
-    background-color: rgba(255, 107, 8, 0.8);
+    background-color: #ff001b;
     transform: scale(1.05);
   }
 
   &:focus {
-    background-color: rgba(255, 107, 8, 0.8);
+    background-color: #ff001b;
     transform: scale(1);
   }
 }
