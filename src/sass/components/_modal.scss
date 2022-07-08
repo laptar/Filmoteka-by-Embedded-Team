@@ -217,9 +217,11 @@
   border-radius: 5px;
   cursor: pointer;
   &:hover {
-    background-color: #ff6b01;
-    border: none;
-    color: #ffffff;
+    // background-color: #ff6b01;
+
+    border: 2px solid white;
+    box-shadow: 7px 7px 14px #c3c3c3, -7px -7px 14px #fdfdfd;
+    // color: #ffffff;
   }
   @include mq(tablet) {
     width: 124px;
