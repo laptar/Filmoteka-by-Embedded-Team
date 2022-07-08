@@ -39,6 +39,8 @@
 }
 
 .gallery__item {
+  border-radius: 5px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @include mq(mobile) {
     width: 440px;
   }
@@ -50,9 +52,16 @@
   @include mq(desktop) {
     width: 393px;
   }
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 10px 5px 5px #818181;
+    cursor: pointer;
+  }
 }
 
 .gallery__film-title {
+  margin-bottom: 5px;
+  padding: 10px;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -66,6 +75,8 @@
 }
 
 .gallery__film-genres {
+  margin-bottom: 5px;
+  padding: 10px;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
