@@ -16,6 +16,13 @@ const markup = renderMovieCard(wachedArray);
 libList.innerHTML = markup;
 let currentList = 'watched';
 
+if (wachedArray.length === 0) {
+  libList.classList.add(gallery);
+}
+if (queueArray.length === 0) {
+  libList.classList.add(gallery);
+}
+
 queue.addEventListener('click', clickBtn);
 function clickBtn() {
   currentList = 'queue';
