@@ -7,7 +7,6 @@
   top: 0;
   left: 0;
   z-index: 100;
-  padding-top: 100px;
 
   width: 100%;
   height: 100%;
@@ -21,6 +20,7 @@
   transition-property: opacity, visibility, transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
   &.is-hidden {
     transform: scale(3);
     opacity: 0;
@@ -41,7 +41,7 @@
   width: 280px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -35%);
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
 
   @include mq(tablet) {
