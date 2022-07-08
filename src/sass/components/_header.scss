@@ -235,8 +235,11 @@ $active: #ff001b;
 .header__navigation {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: 41px;
+  @include mq(tablet) {
+    align-items: baseline;
+  }
 }
 
 .header__logo {
