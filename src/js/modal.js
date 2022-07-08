@@ -233,6 +233,11 @@ function renderModal(event, nameStor) {
   }
 
   // ==========
+  function addArrToLocalStor(key) {
+    return localStorage.getItem(key)
+      ? JSON.parse(localStorage.getItem(key))
+      : [];
+  }
   function renderAfterAdd() {
     let currentList = sessionStorage.getItem('currentList')
       ? JSON.parse(sessionStorage.getItem('currentList'))
@@ -241,10 +246,10 @@ function renderModal(event, nameStor) {
       return;
     }
     if (currentList === 'watched') {
-      watched = JSON.parse(localStorage.getItem('watched'));
+      watched = addArrToLocalStor('watched');
       libList.innerHTML = renderMovieCard(watched);
     } else {
-      queue = JSON.parse(localStorage.getItem('queue'));
+      queue = addArrToLocalStor('queue');
       libList.innerHTML = renderMovieCard(queue);
     }
   }
