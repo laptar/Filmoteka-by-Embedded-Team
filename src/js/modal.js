@@ -247,11 +247,11 @@ function renderModal(event, nameStor) {
       return;
     }
     if (currentList === 'watched') {
-      watched = addArrToLocalStor('watched');
-      libList.innerHTML = renderMovieCard(watched);
+      const watchedArr = addArrToLocalStor('watched');
+      libList.innerHTML = renderMovieCard(watchedArr);
     } else {
-      queue = addArrToLocalStor('queue');
-      libList.innerHTML = renderMovieCard(queue);
+      const queueArr = addArrToLocalStor('queue');
+      libList.innerHTML = renderMovieCard(queueArr);
     }
   }
   function toggleModal() {
