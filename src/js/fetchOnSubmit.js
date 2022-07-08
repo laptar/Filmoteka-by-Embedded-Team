@@ -13,4 +13,4 @@ function searchMovie(page = 1, query) {
   });
 }
 
-export { searchMovie };
+// export { searchMovie };

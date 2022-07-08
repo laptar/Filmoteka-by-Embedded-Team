@@ -1,3 +1,6 @@
+import { renderMovieCard } from './renderMovieCard';
+const libList = document.querySelector('.gallery-library__list');
+
 function renderModal(event, nameStor) {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
@@ -93,6 +96,7 @@ function renderModal(event, nameStor) {
       function remuveWatch() {
         watched = watched.filter(el => String(el.id) !== event.target.id);
         localStorage.setItem('watched', JSON.stringify(watched));
+        libList.innerHTML = renderMovieCard(watched);
         toggleModal();
       }
     } else {
@@ -101,6 +105,7 @@ function renderModal(event, nameStor) {
         if (!watched.find(item => item.id === currentMovie.id)) {
           watched.push(currentMovie);
           localStorage.setItem('watched', JSON.stringify(watched));
+          libList.innerHTML = renderMovieCard(watched);
           toggleModal();
         }
       }
@@ -114,6 +119,8 @@ function renderModal(event, nameStor) {
       function remuveWatch() {
         queue = queue.filter(el => String(el.id) !== event.target.id);
         localStorage.setItem('queue', JSON.stringify(queue));
+        libList.innerHTML = renderMovieCard(queue);
+
         toggleModal();
       }
     } else {
@@ -123,6 +130,7 @@ function renderModal(event, nameStor) {
         if (!queue.find(item => item.id === currentMovie.id)) {
           queue.push(currentMovie);
           localStorage.setItem('queue', JSON.stringify(queue));
+          libList.innerHTML = renderMovieCard(queue);
           toggleModal();
         }
       }
@@ -144,7 +152,6 @@ function renderModal(event, nameStor) {
   function toggleModal() {
     refs.body.classList.remove('body-fixed');
     // console.log(refs.body);
-
     refs.modal.classList.add('is-hidden');
     refs.info.innerHTML = '';
   }
