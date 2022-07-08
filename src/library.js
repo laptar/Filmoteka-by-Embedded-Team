@@ -1,4 +1,4 @@
-import './js/Crew/crew-list';
+import './js/crew/crew-list';
 import './js/scroll-up.js';
 import './sass/main.scss';
 import './js/theme-switcher';

@@ -11,6 +11,7 @@ function renderMovieCard(array) {
                                       movie.poster_path
                                     : 'https://c.tenor.com/MaKLmuQyh0UAAAAC/vincent-vega-pulp-fiction.gif'
                                 }" alt="${movie.title}" id="${movie.id}">
+                                <div class="gallery__wrapper">
                                 <h3 class="gallery__film-title">${
                                   movie.title
                                 }</h3>
@@ -22,10 +23,11 @@ function renderMovieCard(array) {
                                     ? movie.genre_ids.join(', ')
                                     : 'NO DATA'
                                 }
+                                
 
 
 
-                                <span class="gallery__film-year">| ${releaseDate}</span></p>
+                                <span class="gallery__film-year">| ${releaseDate}</span></p></div>
                         </li>`;
   });
 
