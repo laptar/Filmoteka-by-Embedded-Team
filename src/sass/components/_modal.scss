@@ -50,6 +50,7 @@
     padding-top: 40px;
     padding-left: 36px;
     padding-bottom: 40px;
+    padding-right: 72px;
   }
   @include mq(desktop) {
     width: 806px;
@@ -68,20 +69,23 @@
 .modal__image {
   border-radius: 5px;
   overflow: hidden;
+  width: 240px;
+  height: 357px;
+  margin-bottom: 20px;
   @include mq(tablet) {
     width: 264px;
-    height: auto;
+    height: 373px;
     flex-shrink: 0;
-    margin-right: 70px;
+    margin-right: 68px;
   }
   @include mq(desktop) {
     width: 375px;
+    height: 478px;
     margin-right: 16px;
   }
 }
 
 .modal__image img {
-  // max-width: 240px;
   @include mq(tablet) {
     width: 100%;
     margin-right: 68px;
@@ -105,6 +109,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .modal__close-icon {
@@ -210,16 +215,18 @@
   color: #000000;
   border: 1px solid #000000;
   border-radius: 5px;
-  // &:hover {
-  //   background-color: #ff6b01;
-  //   border: none;
-  //   color: #ffffff;
-  // }
+  cursor: pointer;
+  &:hover {
+    background-color: #ff6b01;
+    border: none;
+    color: #ffffff;
+  }
   @include mq(tablet) {
     width: 124px;
   }
   @include mq(desktop) {
     width: 136px;
+    padding: 14px 10px 12px 10px;
   }
 }
 
