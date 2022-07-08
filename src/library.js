@@ -10,34 +10,44 @@ const queue = document.querySelector('.queue');
 
 const libList = document.querySelector('.gallery-library__list');
 
-let wachedArray = JSON.parse(localStorage.getItem('watched'));
-let queueArray = JSON.parse(localStorage.getItem('queue'));
+function addArrToLocalStor(key) {
+  return localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : [];
+}
+let wachedArray = addArrToLocalStor('watched');
+let queueArray = addArrToLocalStor('queue');
 
 let currentList = sessionStorage.getItem('currentList')
   ? JSON.parse(sessionStorage.getItem('currentList'))
   : 'watched';
 
 if (currentList === 'watched') {
+  watched.classList.add('btn-active');
+  queue.classList.remove('btn-active');
+  console.log(wachedArray);
   libList.innerHTML = renderMovieCard(wachedArray);
 } else {
+  watched.classList.remove('btn-active');
+  queue.classList.add('btn-active');
   libList.innerHTML = renderMovieCard(queueArray);
 }
 
-// let currentList = 'watched';
-
 queue.addEventListener('click', clickBtn);
 function clickBtn() {
+  watched.classList.remove('btn-active');
+  queue.classList.add('btn-active');
   sessionStorage.setItem('currentList', JSON.stringify('queue'));
   currentList = 'queue';
-  queueArray = JSON.parse(localStorage.getItem('queue'));
+  queueArray = addArrToLocalStor('queue');
   libList.innerHTML = renderMovieCard(queueArray);
 }
 
 watched.addEventListener('click', clickBtnWatch);
 function clickBtnWatch() {
+  watched.classList.add('btn-active');
+  queue.classList.remove('btn-active');
   sessionStorage.setItem('currentList', JSON.stringify('watched'));
   currentList = 'watched';
-  wachedArray = JSON.parse(localStorage.getItem('watched'));
+  wachedArray = addArrToLocalStor('watched');
   libList.innerHTML = renderMovieCard(wachedArray);
 }
 

@@ -1,4 +1,7 @@
 function renderMovieCard(array) {
+  if (array.length === 0) {
+    return '<img class="gallery" src="https://c.tenor.com/KOZLvzU0o4kAAAAC/no-results.gif" width="500px" alt=""/>';
+  }
   const markup = array.map(movie => {
     const releaseDate = movie.release_date.split('-')[0];
     return `<li class="gallery__item">
