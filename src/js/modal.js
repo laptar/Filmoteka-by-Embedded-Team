@@ -46,8 +46,9 @@ function renderModal(event, nameStor) {
             <td class="modale__table-name">Vote/Votes</td>
             <td class="modale__table-about">
               <span class="vote">${currentMovie.vote_average}</span>
-              <span class="modale__table-name">/</span>${currentMovie.vote_count
-      }
+              <span class="modale__table-name">/</span>${
+                currentMovie.vote_count
+              }
             </td>
           </tr>
           <tr class="modale__table-row">
@@ -62,8 +63,8 @@ function renderModal(event, nameStor) {
           <tr class="modale__table-row">
             <td class="modale__table-name">Genre</td>
             <td class="modale__table-about">${currentMovie.genre_ids.join(
-        ', '
-      )}</td>
+              ', '
+            )}</td>
           </tr>
         </tbody>
       </table>
@@ -72,15 +73,17 @@ function renderModal(event, nameStor) {
       <ul class="buttons">
         <button
           type="button"
-          class="modal__button-watched modal__button-text ${isInWatched ? 'accent' : ''
-      }"
+          class="modal__button-watched modal__button-text ${
+            isInWatched ? 'accent' : ''
+          }"
         >${isInWatched ? 'REMUVE WATCH' : 'add to watched'}
           
         </button>
         <button 
           type="button"
-            class="modal__button-queue modal__button-text ${isInQueue ? 'accent' : ''
-      }"
+            class="modal__button-queue modal__button-text ${
+              isInQueue ? 'accent' : ''
+            }"
         >${isInQueue ? 'REMUVE QUEUE' : 'add to queue'}
           
         </button>
@@ -185,14 +188,12 @@ function renderModal(event, nameStor) {
     // ----
     document.addEventListener('keydown', ev => {
       renderAfterAdd();
-
       refs.body.classList.remove('body-fixed');
       refs.modal.classList.add('is-hidden');
       refs.info.innerHTML = '';
     });
     refs.modal.addEventListener('mousedown', evt => {
       renderAfterAdd();
-
       refs.body.classList.remove('body-fixed');
       if (evt.target.nodeName === 'SECTION') {
         refs.modal.classList.add('is-hidden');
@@ -254,6 +255,7 @@ function renderModal(event, nameStor) {
     }
   }
   function toggleModal() {
+    console.log('close');
     renderAfterAdd();
     refs.body.classList.remove('body-fixed');
     refs.modal.classList.add('is-hidden');
