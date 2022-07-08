@@ -4,8 +4,6 @@ const LANG = 'en-US';
 // const PAGE = 1;
 
 async function searchMovie(page = 1, query) {
-  console.log(page);
-  console.log(query);
   return await fetch(
     `${BASE_URL}query=${query}&api_key=${API_KEY}&language=${LANG}&page=${page}`
   ).then(response => {
