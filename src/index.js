@@ -1,8 +1,8 @@
 import './js/scroll-up.js';
 import './js/Crew/crew-list.js';
 import { fetchPopular } from './js/fetchPopular.js';
-import { searchMovie } from './js/searchMovie';
 import { fetchGenres } from './js/fetchGenres.js';
+import { searchMovie } from './js/searchMovie';
 import { renderMovieCard } from './js/renderMovieCard';
 import { addToLocalStorage } from './js/addToLocalStorage';
 import './js/theme-switcher';
@@ -16,7 +16,7 @@ const list = document.querySelector('.gallery__list');
 const form = document.querySelector('.search');
 const warning = document.querySelector('.warning');
 const counterPage = document.querySelector('.counter');
-const logo = document.querySelector('.logo');
+const logo = document.querySelector('.header__logo');
 
 let currentPage = sessionStorage.getItem('currentNumPage')
   ? JSON.parse(sessionStorage.getItem('currentNumPage'))
@@ -51,9 +51,9 @@ function onClick(evt) {
     ? JSON.parse(sessionStorage.getItem('currentNumPage'))
     : 1;
   console.log(currentPage);
-  // query = sessionStorage.getItem('currentSerch')
-  //   ? JSON.parse(sessionStorage.getItem('currentSerch'))
-  //   : '';
+  query = sessionStorage.getItem('currentSerch')
+    ? JSON.parse(sessionStorage.getItem('currentSerch'))
+    : '';
   currentPage = clickCounter(evt, currentPage);
   if (!query) {
     addToLocalStorage(fetchPopular, fetchGenres, currentPage);
@@ -62,8 +62,10 @@ function onClick(evt) {
   }
 }
 
+// -----GoHome
 logo.addEventListener('click', goHome);
 function goHome() {
+  console.log(123);
   query = '';
   currentPage = 1;
   addToLocalStorage(fetchPopular, fetchGenres, currentPage);

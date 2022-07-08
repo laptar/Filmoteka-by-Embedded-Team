@@ -1,4 +1,4 @@
-5186
+5185
 103F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\plugins\moveElemsAttrsToGroup.js133014714363784045 0
 107F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\reporter-dev-server\src\templates133014714351671343 1
 70F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\btn-pag.js133016709467406971 0
@@ -10,7 +10,7 @@
 94F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@lezer\common\dist\index.cjs133014714350103935 0
 82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\tslib\tslib.html133014714348092588 0
 89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\handlebars\print-script133015140699016704 0
-87F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_hero-lib.scss133016905872648869 0
+87F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_hero-lib.scss133016907035081067 0
 80F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\to-regex-range133014714351129116 1
 108F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\cryptography.js133014714374807292 0
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\regions\KE.js133014714396029378 0
@@ -32,7 +32,7 @@
 60F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\.github133014713771677465 1
 89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\terser\lib\sourcemap.js133014714369392602 0
 118F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\test\fixtures\files\embed133014714368909274 1
-77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\github.fb7f49b9.svg133016827342527388 0
+77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\github.fb7f49b9.svg133017343197650015 0
 108F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\src\requests\ConfigRequest.js133014714368803056 0
 89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\posthtml-parser\license133014714346754437 0
 94F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\cache\lib\FSCache.js133014714349354804 0
@@ -53,7 +53,7 @@
 80F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\plugin133014714351671343 1
 92F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@nodelib\fs.walk\out\types133014714359970970 1
 93F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\plugins\removeXMLNS.js133014714370182425 0
-85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_footer.scss133016639179136231 0
+85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_footer.scss133017295372079354 0
 84F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\utility-types\dist133014714359724552 1
 92F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\runtime-js\LICENSE133014714349550210 0
 153F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\side-effects-false-glob\a\index.js133014714365852721 0
@@ -68,7 +68,7 @@
 107F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\handlebars\lib\handlebars\helpers\each.js133015140699626535 0
 64F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\.prettierrc133014713773604880 0
 94F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\electron-to-chromium\LICENSE133014714346824258 0
-56F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src133016709603050569 1
+56F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src133017295372029487 1
 64F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\.htmlnanorc133014713771694082 0
 106F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\pdf-viewer.js133014714400866162 0
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\weak-lru-cache\rollup.config.js133014714352567354 0
@@ -99,7 +99,7 @@
 112F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\domcontentloaded.js133014714384027441 0
 108F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\utils\test\input\config\empty.json133014714370876764 0
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\test\fixtures\module-a.js133014714372849367 0
-82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index\modal.html133015839037919409 0
+82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index\modal.html133017295372059407 0
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\source-map\lib\binary-search.js133014714355121247 0
 83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\nan\nan_private.h133014714359118034 0
 86F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\yaml\types\binary.js133014714351149066 0
@@ -107,10 +107,10 @@
 64F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\Crew133015839037089076 1
 147F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-browser-alias\foo.js133014714361548584 0
 103F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\css-all.js133014714374895513 0
-74F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\searchMovie.js133016711360596659 0
+74F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\searchMovie.js133017315297837242 0
 83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\lib\style.js133014714370690553 0
 91F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\terser\lib\utils\index.js133014714364236856 0
-57F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist133016905567909973 1
+57F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist133017358591058688 1
 122F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV3\files133014714366933139 1
 111F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\optimizer-image\lib\ImageOptimizer.js133014714349324883 0
 85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\lmdb\src\cursor.cpp133014714372701072 0
@@ -118,7 +118,7 @@
 88F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\uglify-js\lib\scope.js133015140701043791 0
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\regions\AF.js133014714355963565 0
 74F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\css-tree133014714375399404 1
-73F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-library133016709467476786 1
+73F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-library133017295372059407 1
 65F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules133016777518984148 1
 123F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mtest3.c133014714370660871 0
 87F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index\pagination.html133015136678098543 0
@@ -135,7 +135,7 @@
 83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\yaml\package.json133014714369194610 0
 74F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\posthtml133014714353425703 1
 98F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\css-what\lib\commonjs\types.d.ts133014714361152948 0
-83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index\footer.html133016639178891849 0
+83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index\footer.html133017295372039748 0
 98F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\node-gyp-build-optional-packages133014714354049080 1
 109F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\css-selection.js133014714379771138 0
 112F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\plugins\removeNonInheritableGroupAttrs.js133014714368777546 0
@@ -145,10 +145,9 @@
 71F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fastq133014714356617232 1
 92F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\sass\types\value\list.d.ts133014714370983676 0
 87F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\import-fresh\index.js133014714348886030 0
-91F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index\theme-switcher.html133016639178901737 0
 73F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\spin.js133016121622264382 1
 65F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\README.pl.md133014713773648258 0
-86F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_gallery.scss133016639179146083 0
+86F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_gallery.scss133017296884763636 0
 110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\css-dir-pseudo.js133014714375469469 0
 111F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\abortcontroller-polyfill\dist\umd-polyfill.js133014714356567892 0
 65F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\README.uk.md133014713773653260 0
@@ -162,20 +161,20 @@
 109F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\console-basic.js133014714373716810 0
 102F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\lib\UncommittedAsset.js133014714376154696 0
 106F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\handlebars\lib\handlebars\safe-string.js133015140701310174 0
-71F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index133016775997977277 1
+71F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index133017295372059407 1
 82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_btn.scss133016901302870914 0
 88F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\nth-check\lib\index.js133014714352567354 0
 85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\type-fest\base.d.ts133014714354026190 0
 72F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@types133014714338041149 1
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\transformer-babel\package.json133014714360175747 0
-67F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\index.html133016709602861343 0
+67F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\index.html133017295371990005 0
 122F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\runtime-js\lib\helpers\browser\preload-loader.js133014714363883782 0
 77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\xxhash-wasm133014714355999784 1
 110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@swc\helpers\lib\_iterable_to_array_limit.js133014714367397309 0
 85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\terser\bin\uglifyjs133014714351601528 0
 99F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\source-map\dist\source-map.min.js133014714361023293 0
 107F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\images\Mobile\retina\header-library-mobile@2x.jpeg133014713774116902 0
-65F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\index.js133016895827628862 0
+65F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\index.js133017329598656427 0
 103F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\type-fest\source\set-return-type.d.ts133014714363803988 0
 67F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\utils133014713774317310 1
 83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\react-refresh\cjs133014714354039089 1
@@ -183,17 +182,17 @@
 93F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\neo-async\mapValuesLimit.js133015140699947427 0
 76F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fclone\src133014714356097149 1
 122F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\handlebars\dist\amd\handlebars\helpers\helper-missing.js133015140700072615 0
-59F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js133016754429726433 1
+59F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js133017295372019502 1
 89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\utils\_visually-hidden.scss133014713774317310 0
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\transformer-html\src\inline.js133014714354809454 0
 72F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@babel133014714338045663 1
 94F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\transformer-json\lib133014714348915946 1
 113F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\transformer-posthtml\lib\loadPlugins.js133014714349285249 0
-69F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\library.html133016709603050569 0
+69F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\library.html133017295372029487 0
 78F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@swc\helpers133014714372654444 1
 80F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\posthtml\types133014714353719180 1
 70F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\images\Tablet133014713774166528 1
-67F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\library.js133016656407277508 0
+67F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\library.js133017358589705241 0
 89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\spin\assets\preview.jpg133016741087258281 0
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\plugins\convertPathData.js133014714359931994 0
 88F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index\footer-team.html133016000972512307 0
@@ -202,14 +201,14 @@
 114F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\lmdb\node_modules\node-addon-api\tools\README.md133014714360371783 0
 87F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-library\hero-lib.html133016709467476786 0
 85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\nan\nan_callbacks.h133014714350153792 0
-66F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\Templates133015136677784147 1
+66F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\Templates133017295371979620 1
 108F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\runtime-react-refresh\package.json133014714351890709 0
 80F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\yaml\schema.js133014714364143344 0
 90F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\safe-buffer\package.json133014714349747693 0
 148F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-fallback\package.json133014714373218903 0
 82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\Templates\Moviescards.hbs133015136677784147 0
 108F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\css-autofill.js133014714375007620 0
-79F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\Templates\teamCard.hbs133015136677794132 0
+79F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\Templates\teamCard.hbs133017295371979620 0
 75F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\neo-async133015140700767501 1
 148F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-browser-alias\main.js133014714369284552 0
 85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\terser\lib\scope.js133014714368863742 0
@@ -217,7 +216,7 @@
 122F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\test\unit\removeFiles.spec.js133014714357407881 0
 135F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV2\files\embed\embed2133014714369757648 1
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\regions\MK.js133014714400419806 0
-66F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\base133016000972551928 1
+66F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\base133017295372069594 1
 111F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\text-decoration.js133014714401673307 0
 96F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\plugins\collapseGroups.js133014714358772829 0
 96F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@babel\code-frame\lib\index.js133014714350079161 0
@@ -229,7 +228,7 @@
 81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index\hero.html133016754504907274 0
 77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\base\_grid.scss133014713774275805 0
 146F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\source-map\parcel_sourcemap_wasm\dist-node\parcel_sourcemap_wasm_bg.wasm133014714373010160 0
-72F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components133016775997987250 1
+72F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components133017295372149420 1
 86F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\htmlnano\LICENSE.txt133014714370931556 0
 138F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\README.md133014714354464392 0
 107F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\import-maps.js133014714394763378 0
@@ -254,7 +253,7 @@
 86F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\ordered-binary\tests133014714352577327 1
 114F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@babel\highlight\node_modules\color-name\LICENSE133014714351511777 0
 76F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\terser\lib133014714369757648 1
-89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_header-lib.scss133015839037948992 0
+89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_header-lib.scss133017295372119476 0
 82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\anymatch\LICENSE133014714346864151 0
 82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\terser\README.md133014714370315769 0
 111F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\runtime-js\src\helpers\.eslintrc.json133014714365967704 0
@@ -262,34 +261,34 @@
 103F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\type-fest\source\merge-exclusive.d.ts133014714360120362 0
 79F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\spin\Makefile133016741087308150 0
 137F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional-packages.cmd133014714402485534 0
-85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_header.scss133016775997987250 0
+85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_header.scss133017295372129441 0
 88F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\tslib\modules\index.js133014714349887979 0
 88F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\neo-async\retryable.js133015140700309942 0
 115F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\hardwareconcurrency.js133014714394532145 0
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\ordered-binary\rollup.config.js133014714351793101 0
 83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\htmlnano\index.js133014714356822751 0
-84F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_modal.scss133016777471729719 0
+84F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_modal.scss133017295372139188 0
 89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\neo-async\autoInject.js133015140699330335 0
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\regions\MV.js133014714400537430 0
 90F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\utility-types\SUPPORT.md133014714357427820 0
 88F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_scroll-up.scss133016000972581848 0
-93F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_theme-switcher.scss133016639179166272 0
+93F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\components\_theme-switcher.scss133017295372149420 0
 93F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\plugins\mergeStyles.js133014714363475118 0
 134F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\test\fixtures\targets-default-distdir-none\package.json133014714379705485 0
 76F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fill-range133014714351218908 1
-77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\base\_base.scss133015136678208665 0
+77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\base\_base.scss133017295372069594 0
 86F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\neo-async\timeout.js133015140700602041 0
 99F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\posthtml-expressions\package.json133014714355435705 0
 99F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\mp3.js133014714400462866 0
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\entities\lib\decode_codepoint.d.ts.map133014714357308115 0
 81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\globals\license133014714346814280 0
 82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\handlebars\types133015140702551534 1
-78F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\base\_reset.scss133016794824924179 0
+78F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\sass\base\_reset.scss133017295254485771 0
 111F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\src\removeFiles.js133014714357162709 0
 93F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fast-glob\out\utils\fs.d.ts133014714365032252 0
 94F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\sass\types\value\string.d.ts133014714372750909 0
 73F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\timsort133014714354892965 1
-89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-library\header-lib.html133015839037929048 0
+89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-library\header-lib.html133017295372069594 0
 79F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\css-tree\data133014714375276529 1
 85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fast-glob\out\utils133014714367227789 1
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\term-size\vendor\windows\term-size.exe133014714353770898 0
@@ -298,7 +297,7 @@
 85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\commander\Readme.md133014714354708460 0
 90F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\wordwrap\README.markdown133015140700253636 0
 82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\neo-async\dir.js133015140699468422 0
-83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index\header.html133016775997977277 0
+83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\partials-index\header.html133017295372049583 0
 78F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\images\SVG\sprite.svg133016775997977277 0
 80F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\nan\nan_json.h133014714356026524 0
 76F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\dotenv\lib133014714354918681 1
@@ -318,7 +317,7 @@
 128F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV4\files\embed133014714370038323 1
 82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\nan\CHANGELOG.md133014714363434233 0
 111F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\urlsearchparams.js133014714401908057 0
-80F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\addToLocalStorage.js133016895591680185 0
+80F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\addToLocalStorage.js133017295253154453 0
 145F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV4\files\embed\embed2\file3.txt133014714370095688 0
 83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\lmdb\src\misc.cpp133014714372875082 0
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\plugins\addClassesToSVGElement.js133014714355569687 0
@@ -328,7 +327,7 @@
 77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fclone\dist133014714354775277 1
 73F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\is-json133014714353897304 1
 114F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\unhandledrejection.js133014714401883800 0
-76F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\fetchOnSubmit.js133016802812175671 0
+76F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\fetchOnSubmit.js133017295253164423 0
 115F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@babel\highlight\node_modules\ansi-styles\license133014714349917894 0
 75F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\fetchPopular.js133016709467426921 0
 89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\transformer-raw133014714351661372 1
@@ -343,7 +342,7 @@
 81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\posthtml-parser133014714354354967 1
 122F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@swc\helpers\src\_class_static_private_field_spec_get.js133014714374705742 0
 110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\hash\parcel-hash.win32-x64-msvc.node133014714367447776 0
-68F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\modal.js133016799239179836 0
+68F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\modal.js133017347457800448 0
 74F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\chokidar133014714355314353 1
 107F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\handlebars\dist\amd\handlebars\decorators133015140700356828 1
 73F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\renderCard.js133015839037859204 0
@@ -356,7 +355,7 @@
 114F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\permissions-policy.js133014714400883105 0
 112F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\handlebars\dist\cjs\handlebars\helpers\with.js133015140701450084 0
 113F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\.circleci\config.yml133014714370315769 0
-72F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\scroll-up.js133016709467436892 0
+72F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\scroll-up.js133017315856006743 0
 80F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\weak-lru-cache133014714355419881 1
 108F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\htmlnano\lib\modules\removeOptionalTags.js133014714361192847 0
 70F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\js\spinner.js133016639178861844 0
@@ -419,6 +418,9 @@
 77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\images\SVG\close.svg133015136677824056 0
 91F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\domutils\lib\helpers.d.ts133014714359748106 0
 95F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\v8-compile-cache\CHANGELOG.md133014714351521748 0
+90F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\packager-css\lib133014714348915946 1
+87F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\namer-default133014714351671343 1
+83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\dotenv-expand\lib133014714353631156 1
 110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\test\fixtures\duplicate-targets133014714378634914 1
 95F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\src\images\team-pictures\IrynaSabinina.jpg133015136677893867 0
 79F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\lmdb\write.js133014714375236635 0
@@ -471,7 +473,7 @@
 94F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\cosmiconfig\dist\Explorer.js133014714350017626 0
 101F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\runtime-js\lib\helpers\node133014714364248541 1
 117F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\dom-manip-convenience.js133014714384012140 0
-86F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\Taras-Lapitskiy.fa3d2572.png133016827341524732 0
+86F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\Taras-Lapitskiy.fa3d2572.png133017343197500677 0
 91F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\reporter-cli\test133014714355837651 1
 113F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\transformer-html\src\HTMLTransformer.js133014714353529138 0
 108F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\type-fest\source\require-at-least-one.d.ts133014714363242830 0
@@ -718,8 +720,8 @@
 119F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\posthtml\node_modules\posthtml-parser\dist\index.d.ts133014714354441296 0
 88F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-transformer-hbs133015140702409923 1
 75F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fast-glob133014714363230222 1
-72F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fclone133014714356320917 1
 95F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\nullthrows\nullthrows.js.flow133014714352184685 0
+72F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fclone133014714356320917 1
 128F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV2\files\embed133014714369737764 1
 101F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\runtime-js\lib\JSRuntime.js133014714363294908 0
 74F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\get-port133014714352022894 1
@@ -890,9 +892,9 @@
 83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\sass\package.json133014714369814150 0
 87F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\posthtml-match-helper133014714351159432 1
 116F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\background-clip-text.js133014714367248728 0
-98F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\terser\lib\compress\inference.js133014714365562717 0
 81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\posthtml-render133014714352349882 1
 130F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@swc\helpers\lib\_class_check_private_static_field_descriptor.js133014714359514940 0
+98F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\terser\lib\compress\inference.js133014714365562717 0
 93F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\config-default\test133014714349877999 1
 102F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\css-tree\lib\syntax\node\Operator.js133014714373340253 0
 109F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\cosmiconfig\dist\getPropertyByPath.d.ts.map133014714360215409 0
@@ -1222,7 +1224,7 @@
 101F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\node-addon-api\package-support.json133014714358948024 0
 109F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\vector-effect.js133014714401975948 0
 90F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\wordwrap\example\meat.js133015140700309942 0
-96F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-mobile@2x.44758a67.jpeg133016827341644414 0
+96F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-mobile@2x.44758a67.jpeg133017343198394278 0
 111F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\css-caret-color.js133014714375158466 0
 112F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\mutationobserver.js133014714400527458 0
 106F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@swc\helpers\src\_array_without_holes.js133014714372780844 0
@@ -1574,7 +1576,7 @@
 98F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\plugins\removeDimensions.js133014714366458800 0
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\transformer-css\LICENSE133014714346894067 0
 99F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\workers\src\WorkerFarm.js133014714366399861 0
-82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\Roman-babiy.d9cfc3c5.jpg133016827341544681 0
+82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\Roman-babiy.d9cfc3c5.jpg133017343198015286 0
 95F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\plugins\removeDoctype.js133014714366627610 0
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\posthtml-parser\dist\chunk.T6SARJYH.js133014714348995743 0
 87F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\picomatch\lib\scan.js133014714354218073 0
@@ -1593,7 +1595,7 @@
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\plugins\removeEmptyText.js133014714367205580 0
 110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\css-gencontent.js133014714377996780 0
 99F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\svgo\plugins\removeHiddenElems.js133014714367306011 0
-110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1@2x.e575c333.png133016827341614496 0
+110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1@2x.e575c333.png133017343197300954 0
 98F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\resolver-default\LICENSE133014714346894067 0
 94F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\posthtml-parser\changelog.md133014714353906531 0
 94F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\workers\src\types.js133014714365719429 0
@@ -2109,7 +2111,7 @@
 116F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV3133014714364197006 1
 116F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV5133014714365793061 1
 122F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV5\files133014714367467248 1
-107F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1.82f7d64b.jpg133016827341624471 0
+107F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1.82f7d64b.jpg133017343198055181 0
 127F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\handlebars\dist\amd\handlebars\compiler\whitespace-control.js133015140701410197 0
 129F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV5\package.json133014714361262656 0
 106F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\handlebars\dist\cjs\handlebars\logger.js133015140700690193 0
@@ -2163,7 +2165,7 @@
 99F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\electron-to-chromium\package.json133014714356498049 0
 116F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\handlebars\dist\amd\handlebars\compiler\helpers.js133015140700111980 0
 85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\neo-async\during.js133015140699513731 0
-82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.f7626f62.css.map133016905567880039 0
+82F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.f7626f62.css.map133017358185644429 0
 102F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fast-glob\out\providers\transformers133014714363883782 1
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\wai-aria.js133014714402040792 0
 89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\ordered-binary\index.js133014714350143825 0
@@ -2490,7 +2492,7 @@
 137F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\index.js133014714351511777 0
 90F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\optimizer-terser133014714351671343 1
 136F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\LICENSE133014714346984950 0
-76F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\close.df15828d.svg133016827341524732 0
+76F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\close.df15828d.svg133017343197261059 0
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@nodelib\fs.scandir\out\types\index.js133014714355609615 0
 140F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\optional.js133014714352315632 0
 114F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest.c133014714370452435 0
@@ -3051,7 +3053,7 @@
 89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fclone\bench\looparr.js133014714356978499 0
 79F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fastq\.github133014714357162709 1
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\css-tree\lib\syntax\node\WhiteSpace.js133014714375236635 0
-77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\sprite.aa6d12d3.svg133016827342053320 0
+77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\sprite.aa6d12d3.svg133017343197955460 0
 110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\css-namespaces.js133014714378634914 0
 83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\fastq\example.mjs133014714355871931 0
 114F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\test\fixtures\main-mjs\package.json133014714379654472 0
@@ -3142,9 +3144,6 @@
 114F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\electron-to-chromium\full-chromium-versions.json133014714355599659 0
 105F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\electron-to-chromium\full-versions.json133014714356219199 0
 100F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\electron-to-chromium\versions.json133014714356752929 0
-90F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\packager-css\lib133014714348915946 1
-87F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\namer-default133014714351671343 1
-83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\dotenv-expand\lib133014714353631156 1
 92F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\dotenv-expand\package.json133014714346824258 0
 110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\pointer-events.js133014714400962400 0
 89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\dotenv-expand\README.md133014714352239722 0
@@ -3249,7 +3248,7 @@
 88F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\dom-serializer\lib\esm133014714357367996 1
 110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\utils\test\input\sourcemap\inline.js133014714366373299 0
 102F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\dom-serializer\lib\foreignNames.d.ts133014714357162709 0
-96F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-tablet@2x.5e309102.jpeg133016827341933646 0
+96F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-tablet@2x.5e309102.jpeg133017343197580204 0
 95F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\dom-serializer\lib\index.d.ts133014714358685557 0
 99F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\css-tree\lib\syntax\config\mix.js133014714372780844 0
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\src\projectPath.js133014714374787360 0
@@ -3433,7 +3432,7 @@
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\css-tree\lib\syntax\node\Raw.js133014714373627753 0
 98F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\css-tree\lib\syntax\node\Rule.js133014714373726786 0
 102F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\css-tree\lib\syntax\node\Selector.js133014714373766969 0
-89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\Andriy-Hrebenozhko.52bdf528.jpg133016827341524732 0
+89F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\Andriy-Hrebenozhko.52bdf528.jpg133017343197500677 0
 106F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\css-tree\lib\syntax\node\SelectorList.js133014714373822062 0
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\workers\lib\Profiler.js133014714363005992 0
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\css-tree\lib\syntax\node\StyleSheet.js133014714374797320 0
@@ -3967,7 +3966,7 @@
 116F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\document-execcommand.js133014714383983174 0
 80F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\.bin\json5.ps1133014714402485534 0
 97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\workers\src\Profiler.js133014714363124194 0
-93F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-tablet.eee58c5d.jpeg133016827341824213 0
+93F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-tablet.eee58c5d.jpeg133017343198324474 0
 96F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\lib\loadDotEnv.js133014714372719191 0
 121F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\document-scrollingelement.js133014714383995462 0
 101F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\optimizer-svgo\package.json133014714351890709 0
@@ -4030,7 +4029,7 @@
 111F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@swc\helpers\src\_interop_require_wildcard.js133014714375206697 0
 106F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\indexeddb2.js133014714394815899 0
 108F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\inline-block.js133014714394825893 0
-97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-desktop@2x.7468332c.jpeg133016827342003456 0
+97F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-desktop@2x.7468332c.jpeg133017343198563828 0
 105F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\innertext.js133014714394835863 0
 115F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\input-email-tel-url.js133014714394863605 0
 113F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\caniuse-lite\data\features\input-file-accept.js133014714394877367 0
@@ -4475,7 +4474,7 @@
 113F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@babel\helper-validator-identifier\package.json133014714353829174 0
 106F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\source-map\parcel_sourcemap_wasm133014714356822751 1
 115F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\source-map\parcel_sourcemap_wasm\dist-web133014714373019162 1
-81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.f9b3b06b.js.map133016827341973548 0
+81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.f9b3b06b.js.map133017347459303726 0
 128F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\source-map\parcel_sourcemap_wasm\dist-web\package.json133014714360455240 0
 140F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\source-map\parcel_sourcemap_wasm\dist-web\parcel_sourcemap_wasm.js133014714357081548 0
 123F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@babel\highlight\node_modules\supports-color\package.json133014714346994944 0
@@ -4566,7 +4565,7 @@
 105F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\packager-svg\lib\SVGPackager.js133014714349314911 0
 90F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\packager-raw\lib133014714348915946 1
 94F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\packager-raw\LICENSE133014714346904041 0
-77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.f9b3b06b.js133016827341524732 0
+77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.f9b3b06b.js133017347459293764 0
 105F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\packager-raw\lib\RawPackager.js133014714349314911 0
 104F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\packager-js\src\.eslintrc.json133014714360050576 0
 100F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@jridgewell\set-array\package.json133014714350069172 0
@@ -4867,7 +4866,7 @@
 99F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\test\fixtures\parcel133014714379761335 1
 100F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\test\fixtures\plugins133014714371130117 1
 121F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\test\fixtures\targets-default-distdir-none133014714379705485 1
-88F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\DmytroShynkarenko.dd4929a7.jpg133016827341574600 0
+88F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\DmytroShynkarenko.dd4929a7.jpg133017343198095074 0
 101F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@nodelib\fs.scandir\out\utils\fs.js133014714354565360 0
 133F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\test\fixtures\targets-default-distdir-one\package.json133014714379718759 0
 113F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\@parcel\core\test\fixtures\plugins\node_modules133014714372441013 1
@@ -5162,24 +5161,24 @@
 81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\.bin\terser.cmd133014714402540033 0
 81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\.bin\terser.ps1133014714402540033 0
 83F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\node_modules\.bin\uglifyjs.ps1133015140702614822 0
-107F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1.426d5283.jpg133016827341584574 0
-107F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1.5f9f7d2a.jpg133016827341893749 0
-110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1@2x.5c74ed1f.jpg133016827341913702 0
-110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1@2x.8b435dc4.jpg133016827341933646 0
-76F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\Group.844ab94b.svg133016827341524732 0
-94F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-desktop.b7318058.jpeg133016827341873796 0
-93F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-mobile.6eeccbe7.jpeg133016827341554657 0
-75F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\index.975ef6c8.js133016895788778271 0
-79F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\index.975ef6c8.js.map133016895788818158 0
-68F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\index.html133016831771607002 0
-84F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\IrynaSabinina.ebe08be5.jpg133016827341554657 0
-77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.25771032.js133016827341933646 0
-81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.25771032.js.map133016827341973548 0
-77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.3ec96094.js133016827342143084 0
-81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.3ec96094.js.map133016827342192948 0
-78F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.f7626f62.css133016905567870064 0
-70F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.html133016827342557309 0
-86F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\Yehor-Boichenko.e8c638d0.png133016827341544681 0
+107F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1.426d5283.jpg133017343198095074 0
+107F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1.5f9f7d2a.jpg133017343198324474 0
+110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1@2x.5c74ed1f.jpg133017343198494269 0
+110F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\abstract-background-with-red-lines 1@2x.8b435dc4.jpg133017343197590176 0
+76F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\Group.844ab94b.svg133017343197261059 0
+94F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-desktop.b7318058.jpeg133017343198095074 0
+93F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\header-library-mobile.6eeccbe7.jpeg133017343198025266 0
+75F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\index.975ef6c8.js133017347459832589 0
+79F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\index.975ef6c8.js.map133017347459872443 0
+68F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\index.html133017358185779167 0
+84F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\IrynaSabinina.ebe08be5.jpg133017343198344413 0
+77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.25771032.js133017347459303726 0
+81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.25771032.js.map133017347459313704 0
+77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.3ec96094.js133017358590950430 0
+81F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.3ec96094.js.map133017358590989108 0
+78F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.f7626f62.css133017358185634471 0
+70F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\library.html133017358185769191 0
+86F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\dist\Yehor-Boichenko.e8c638d0.png133017343198025266 0
 85F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\assets\actions-config-step-2.png133014713773761533 0
 76F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\assets\how-it-works.png133014713773816638 0
 77F:\JavaScript\GH-projects\Filmoteka-by-Embedded-Team\assets\repo-settings.png133014713773881527 0

@@ -3,14 +3,15 @@ import './js/scroll-up.js';
 import './sass/main.scss';
 import './js/theme-switcher';
 import { renderMovieCard } from './js/renderMovieCard.js';
-import { renderModal } from './js/modal.js';
+import { renderModal } from './js/modal';
 
 const watched = document.querySelector('.watched');
 const queue = document.querySelector('.queue');
 
 const libList = document.querySelector('.gallery-library__list');
-const wachedArray = JSON.parse(localStorage.getItem('watched'));
-const queueArray = JSON.parse(localStorage.getItem('queue'));
+
+let wachedArray = JSON.parse(localStorage.getItem('watched'));
+let queueArray = JSON.parse(localStorage.getItem('queue'));
 
 let currentList = sessionStorage.getItem('currentList')
   ? JSON.parse(sessionStorage.getItem('currentList'))
@@ -28,13 +29,15 @@ queue.addEventListener('click', clickBtn);
 function clickBtn() {
   sessionStorage.setItem('currentList', JSON.stringify('queue'));
   currentList = 'queue';
+  queueArray = JSON.parse(localStorage.getItem('queue'));
   libList.innerHTML = renderMovieCard(queueArray);
 }
 
 watched.addEventListener('click', clickBtnWatch);
-function clickBtnWatch(event) {
+function clickBtnWatch() {
   sessionStorage.setItem('currentList', JSON.stringify('watched'));
   currentList = 'watched';
+  wachedArray = JSON.parse(localStorage.getItem('watched'));
   libList.innerHTML = renderMovieCard(wachedArray);
 }
 
