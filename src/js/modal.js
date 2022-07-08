@@ -187,11 +187,12 @@ function renderModal(event, nameStor) {
 
     // ----
     document.addEventListener('keydown', ev => {
-      renderAfterAdd();
-
-      refs.body.classList.remove('body-fixed');
-      refs.modal.classList.add('is-hidden');
-      refs.info.innerHTML = '';
+      if (ev.key === 'Escape') {
+        renderAfterAdd();
+        refs.body.classList.remove('body-fixed');
+        refs.modal.classList.add('is-hidden');
+        refs.info.innerHTML = '';
+      }
     });
     refs.modal.addEventListener('mousedown', evt => {
       renderAfterAdd();
