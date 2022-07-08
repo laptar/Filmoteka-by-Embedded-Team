@@ -1,4 +1,4 @@
-import './js/Crew/crew-list';
+import './js/crew/crew-list';
 import './js/scroll-up.js';
 import './sass/main.scss';
 import './js/theme-switcher';
@@ -48,8 +48,8 @@ function clickBtn() {
   currentList = 'queue';
   queueArray = JSON.parse(localStorage.getItem('queue'));
   libList.innerHTML = renderMovieCard(queueArray);
-  queue.classList.add('btn-active');
-  watched.classList.remove('btn-active');
+  // queue.classList.add('btn-active');
+  // watched.classList.remove('btn-active');
 }
 
 watched.addEventListener('click', clickBtnWatch);
@@ -58,8 +58,8 @@ function clickBtnWatch() {
   currentList = 'watched';
   wachedArray = JSON.parse(localStorage.getItem('watched'));
   libList.innerHTML = renderMovieCard(wachedArray);
-  queue.classList.remove('btn-active');
-  watched.classList.add('btn-active');
+  // queue.classList.remove('btn-active');
+  // watched.classList.add('btn-active');
 }
 
 libList.addEventListener('click', clickCard);
