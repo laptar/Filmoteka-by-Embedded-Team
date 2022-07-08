@@ -18,17 +18,17 @@
 
   @media screen and (min-width: 480px) {
     bottom: 39px;
-    right: calc(((85vw - 480px) / 2));
+    right: calc(((100vw - 95vw) / 2));
   }
 
   @media screen and (min-width: 768px) {
     bottom: 39px;
-    right: calc(((85vw - 768px) / 2));
+    right: calc(((100vw - 95vw) / 2));
   }
 
   @media screen and (min-width: 1280px) {
     bottom: 55px;
-    right: calc(((85vw - 1280px) / 2));
+    right: calc(((100vw - 95vw) / 2));
   }
 }
 
