@@ -17,10 +17,20 @@ libList.innerHTML = markup;
 let currentList = 'watched';
 
 if (wachedArray.length === 0) {
-  libList.classList.add(gallery);
+  libList.innerHTML = `<img
+        class="gallery"
+        src="https://c.tenor.com/KOZLvzU0o4kAAAAC/no-results.gif"
+        width="500px"
+        alt=""
+      />`;
 }
 if (queueArray.length === 0) {
-  libList.classList.add(gallery);
+  libList.innerHTML = `<img
+        class="gallery"
+        src="https://c.tenor.com/KOZLvzU0o4kAAAAC/no-results.gif"
+        width="500px"
+        alt=""
+      />`;
 }
 
 queue.addEventListener('click', clickBtn);
