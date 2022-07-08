@@ -1,5 +1,5 @@
 import './js/scroll-up.js';
-import './js/crew/crew-list.js';
+import './js/crew1/crew-list';
 import { fetchPopular } from './js/fetchPopular.js';
 import { fetchGenres } from './js/fetchGenres.js';
 import { searchMovie } from './js/searchMovie';
