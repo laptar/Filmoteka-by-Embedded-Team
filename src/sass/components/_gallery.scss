@@ -34,6 +34,7 @@
 }
 
 .gallery__item {
+    position: relative;
     border-radius: 5px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @include mq(mobile) {
@@ -94,7 +95,7 @@
 }
 
 .gallery__container {
-    margin-left: auto;
+    <<<<<<< HEAD margin-left: auto;
     margin-right: auto;
     padding-right: 20px;
     padding-left: 20px;
@@ -113,3 +114,65 @@
         padding-right: 32px;
     }
 }
+
+=======margin-left: auto;
+margin-right: auto;
+padding-right: 20px;
+padding-left: 20px;
+min-height: 100vh;
+@include mq(mobile) {
+    width: 480px;
+}
+
+@include mq(tablet) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+@include mq(desktop) {
+    width: 1280px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+
+}
+// -----Іконки про наявність в лайбері на картках
+.ico-watched {
+    padding: 4px;
+    width: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    left: 5px;
+    top: 20px;
+    border: 2px solid #ff001b;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.ico__text-watched {
+    text-align: center;
+    font-weight: 500;
+    color: #ff001b;
+}
+.ico-queue {
+    padding: 4px;
+    width: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    border: 2px solid #ff6b02;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.ico__text-queue {
+    text-align: center;
+    font-weight: 500;
+    color: #ff6b02;
+}
+>>>>>>>dev
