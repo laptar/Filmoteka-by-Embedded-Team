@@ -18,6 +18,7 @@
     "url": "https://github.com/laptar/Filmoteka-by-Embedded-Team/issues"
   },
   "dependencies": {
+    "bourbon": "^7.2.0",
     "handlebars": "^4.7.7",
     "lodash.throttle": "^4.1.1",
     "modern-normalize": "^1.1.0",
