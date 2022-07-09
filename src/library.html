@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filmoteka-library</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="page">
+  <body class="page">
     <div class="wrapper1">
-        <header class="header-background">
-            <include src="./partials-library/header-lib.html"></include>
-        </header>
-        <main>
-            <include src="./partials-index/scroll-up.html"></include>
-            <include src="./partials-library/hero-lib.html"></include>
-        </main>
-        <footer class="footer">
-            <include src="./partials-index/spinner.html"></include>
-            <include src="./partials-index/footer.html"></include>
-        </footer>
+      <header class="header-background">
+        <include src="./partials-library/header-lib.html"></include>
+      </header>
+      <main>
+        <include src="./partials-index/scroll-up.html"></include>
+        <include src="./partials-library/hero-lib.html"></include>
+      </main>
+      <footer class="footer">
+        <include src="./partials-index/spinner.html"></include>
+        <include src="./partials-index/footer.html"></include>
+      </footer>
     </div>
 
     <!--Модальні вікна-->
     <include src="./partials-index/modal.html"></include>
     <include src="./partials-index/footer-team.html"></include>
-    <script src="../src/js/modal.js" type="module"></script>
-    <script type="module" src="../node_modules/spin.js/spin.js"></script>
+    <!-- <script src="../src/js/modal.js" type="module"></script> -->
     <script src="./library.js" type="module"></script>
-</body>
-
+  </body>
 </html>

@@ -26,13 +26,13 @@ function renderMovieCard(array) {
         <div class="ico-watched ${
           findInLocStor(movie.id, 'watched') ? '' : 'visually-hidden'
         }">
-          <img src="./images/watch.png" alt="" />
+          <img src="https://i.ibb.co/XWK8gqD/watch.png" alt="" width="45px" />
           <p class="ico__text-watched">ON WATCHED</p>
         </div>
         <div class="ico-queue ${
           findInLocStor(movie.id, 'queue') ? '' : 'visually-hidden'
         }">
-          <img src="./images/queue.svg" alt="" />
+          <img src="https://i.ibb.co/gT9rvMS/queue.png" alt="" />
           <p class="ico__text-queue">ON QUEUE</p>
         </div>
                                 <div class="gallery__wrapper">
