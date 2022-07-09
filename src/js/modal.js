@@ -35,7 +35,11 @@ function renderModal(event, nameStor) {
       <button type="button" class="modal__button-close" data-modal-close></button>
     <div >
       <img class="modal__image"
-        src = "https://image.tmdb.org/t/p/w500/${currentMovie.poster_path}"
+        src = "${
+          currentMovie.poster_path
+            ? 'https://image.tmdb.org/t/p/w500/' + currentMovie.poster_path
+            : 'https://c.tenor.com/MaKLmuQyh0UAAAAC/vincent-vega-pulp-fiction.gif'
+        }"
         alt="${currentMovie.title}"
            />
     </div>
@@ -63,14 +67,18 @@ function renderModal(event, nameStor) {
           </tr>
           <tr class="modale__table-row">
             <td class="modale__table-name">Genre</td>
-            <td class="modale__table-about">${currentMovie.genre_ids.join(
-              ', '
-            )}</td>
+            <td class="modale__table-about">${
+              currentMovie.genre_ids.length
+                ? currentMovie.genre_ids.join(', ')
+                : 'NO DATA'
+            }</td>
           </tr>
         </tbody>
       </table>
       <h2 class="modal__about-title">About</h2>
-      <p class="modal__about-text">${currentMovie.overview}</p>
+      <p class="modal__about-text">${
+        currentMovie.overview ? currentMovie.overview : 'NO DESCRIPTION'
+      }</p>
       <ul class="buttons">
         <button
           type="button"

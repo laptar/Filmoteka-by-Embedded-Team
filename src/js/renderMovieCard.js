@@ -47,11 +47,9 @@ function renderMovieCard(array) {
                                     ? movie.genre_ids.join(', ')
                                     : 'NO DATA'
                                 }
-                                
-
-
-
-                                <span class="gallery__film-year">| ${releaseDate}</span></p></div>
+                                <span class="gallery__film-year">| ${
+                                  releaseDate ? releaseDate : 'unknown'
+                                }</span></p></div>
                         </li>`;
   });
 
