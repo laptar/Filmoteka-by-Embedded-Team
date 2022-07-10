@@ -8,7 +8,7 @@ import { addToLocalStorage } from './js/addToLocalStorage';
 import './js/theme-switcher';
 import './sass/main.scss';
 import { toTopOnClick } from './js/scroll-up';
-import { spinnerr } from './js/spinner';
+// import { spinnerr } from './js/spinner';
 
 import { renderModal } from './js/modal.js';
 import { clickCounter } from './js/btn-pag';
@@ -51,7 +51,6 @@ btnList.addEventListener('click', onClick);
 function onClick(evt) {
   if (evt.target.nodeName === 'BUTTON') {
     toTopOnClick();
-    console.log(evt.target.nodeName);
     currentPage = sessionStorage.getItem('currentNumPage')
       ? JSON.parse(sessionStorage.getItem('currentNumPage'))
       : 1;

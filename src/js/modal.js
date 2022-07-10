@@ -1,4 +1,5 @@
 import { renderMovieCard } from './renderMovieCard';
+import { counter } from './btn-pag';
 const libList = document.querySelector('.gallery-library__list');
 const homeList = document.querySelector('.gallery__list');
 
@@ -35,10 +36,11 @@ function renderModal(event, nameStor) {
       <button type="button" class="modal__button-close" data-modal-close></button>
     <div >
       <img class="modal__image"
-        src = "${currentMovie.poster_path
-        ? 'https://image.tmdb.org/t/p/w500/' + currentMovie.poster_path
-        : 'https://c.tenor.com/MaKLmuQyh0UAAAAC/vincent-vega-pulp-fiction.gif'
-      }"
+        src = "${
+          currentMovie.poster_path
+            ? 'https://image.tmdb.org/t/p/w500/' + currentMovie.poster_path
+            : 'https://c.tenor.com/MaKLmuQyh0UAAAAC/vincent-vega-pulp-fiction.gif'
+        }"
         alt="${currentMovie.title}"
            />
     </div>
@@ -50,8 +52,9 @@ function renderModal(event, nameStor) {
             <td class="modale__table-name">Vote/Votes</td>
             <td class="modale__table-about">
               <span class="vote">${currentMovie.vote_average}</span>
-              <span class="modale__table-name">/</span>${currentMovie.vote_count
-      }
+              <span class="modale__table-name">/</span>${
+                currentMovie.vote_count
+              }
             </td>
           </tr>
           <tr class="modale__table-row">
@@ -65,28 +68,32 @@ function renderModal(event, nameStor) {
           </tr>
           <tr class="modale__table-row">
             <td class="modale__table-name">Genre</td>
-            <td class="modale__table-about">${currentMovie.genre_ids.length
-        ? currentMovie.genre_ids.join(', ')
-        : 'NO DATA'
-      }</td>
+            <td class="modale__table-about">${
+              currentMovie.genre_ids.length
+                ? currentMovie.genre_ids.join(', ')
+                : 'NO DATA'
+            }</td>
           </tr>
         </tbody>
       </table>
       <h2 class="modal__about-title">About</h2>
-      <p class="modal__about-text">${currentMovie.overview ? currentMovie.overview : 'NO DESCRIPTION'
+      <p class="modal__about-text">${
+        currentMovie.overview ? currentMovie.overview : 'NO DESCRIPTION'
       }</p>
       <ul class="buttons">
         <button
           type="button"
-          class="modal__button-watched modal__button-text ${isInWatched ? 'accent' : ''
-      }"
+          class="modal__button-watched modal__button-text ${
+            isInWatched ? 'accent' : ''
+          }"
         >${isInWatched ? 'REMOVE FROM WATCHED' : 'add to watched'}
           
         </button>
         <button 
           type="button"
-            class="modal__button-queue modal__button-text ${isInQueue ? 'accent' : ''
-      }"
+            class="modal__button-queue modal__button-text ${
+              isInQueue ? 'accent' : ''
+            }"
         >${isInQueue ? 'REMOVE FROM QUEUE' : 'add to queue'}
           
         </button>
@@ -208,11 +215,37 @@ function renderModal(event, nameStor) {
       return;
     }
     if (currentList === 'watched') {
-      const watchedArr = addArrToLocalStor('watched');
-      libList.innerHTML = renderMovieCard(watchedArr);
+      const wachedArray = addArrToLocalStor('watched');
+      const currentPerPage = Number(
+        JSON.parse(sessionStorage.getItem('perPage'))
+      );
+      const currentPageLibWa = JSON.parse(
+        sessionStorage.getItem('currentPageLibWa')
+      );
+      let total_pages = Math.ceil(wachedArray.length / currentPerPage);
+      counter(total_pages, currentPageLibWa);
+      libList.innerHTML = renderMovieCard(
+        wachedArray.slice(
+          (currentPageLibWa - 1) * currentPerPage,
+          currentPerPage * currentPageLibWa
+        )
+      );
     } else {
-      const queueArr = addArrToLocalStor('queue');
-      libList.innerHTML = renderMovieCard(queueArr);
+      const queueArray = addArrToLocalStor('queue');
+      const currentPerPage = Number(
+        JSON.parse(sessionStorage.getItem('perPage'))
+      );
+      const currentPageLibQu = JSON.parse(
+        sessionStorage.getItem('currentPageLibQu')
+      );
+      let total_pages = Math.ceil(queueArray.length / currentPerPage);
+      counter(total_pages, currentPageLibQu);
+      libList.innerHTML = renderMovieCard(
+        queueArray.slice(
+          (currentPageLibQu - 1) * currentPerPage,
+          currentPerPage * currentPageLibQu
+        )
+      );
     }
   }
   function toggleModal() {
