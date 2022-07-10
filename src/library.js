@@ -1,5 +1,5 @@
 import './js/preloader';
-import './js/crew1/crew-list';
+import './js/crew/crew-list';
 import './js/scroll-up.js';
 import './sass/main.scss';
 import './js/theme-switcher';
@@ -144,26 +144,8 @@ libList.addEventListener('click', clickCard);
 function clickCard(evt) {
   if (JSON.parse(sessionStorage.getItem('currentList')) === 'watched') {
     renderModal(evt, 'watched');
-    // wachedArray = addArrToLocalStor('watched');
-    // let total_pages = Math.ceil(wachedArray.length / currentPerPageWa);
-    // counter(total_pages, currentPageLibWa);
-    // libList.innerHTML = renderMovieCard(
-    //   wachedArray.slice(
-    //     (currentPageLibWa - 1) * currentPerPageWa,
-    //     currentPerPageWa * currentPageLibWa
-    //   )
-    // );
   } else {
     renderModal(evt, 'queue');
-    // queueArray = addArrToLocalStor('queue');
-    // let total_pages = Math.ceil(queueArray.length / currentPerPageQu);
-    // counter(total_pages, currentPageLibQu);
-    // libList.innerHTML = renderMovieCard(
-    //   queueArray.slice(
-    //     (currentPageLibQu - 1) * currentPerPageQu,
-    //     currentPerPageQu * currentPageLibQu
-    //   )
-    // );
   }
 }
 
