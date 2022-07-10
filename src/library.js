@@ -9,8 +9,8 @@ import { counter } from './js/btn-pag';
 import { toTopOnClick } from './js/scroll-up';
 import { clickCounter } from './js/btn-pag';
 
-const watched = document.querySelector('.watched');
-const queue = document.querySelector('.queue');
+const watchedBtn = document.querySelector('.watched');
+const queueBtn = document.querySelector('.queue');
 const perPage = document.querySelector('#perPage');
 const libList = document.querySelector('.gallery-library__list');
 const btnList = document.querySelector('.btn__list');
@@ -83,16 +83,16 @@ if (JSON.parse(sessionStorage.getItem('currentList')) === 'watched') {
 
 watched.addEventListener('click', clickBtnWatch);
 function clickBtnWatch() {
-  watched.classList.add('btn-active');
-  queue.classList.remove('btn-active');
+  watchedBtn.classList.add('btn-active');
+  queueBtn.classList.remove('btn-active');
   sessionStorage.setItem('currentList', JSON.stringify('watched'));
   renderWatchadFilmCare();
 }
 
 queue.addEventListener('click', clickBtnQueue);
 function clickBtnQueue() {
-  watched.classList.remove('btn-active');
-  queue.classList.add('btn-active');
+  watchedBtn.classList.remove('btn-active');
+  queueBtn.classList.add('btn-active');
   sessionStorage.setItem('currentList', JSON.stringify('queue'));
   renderQueueFilmCard();
 }
