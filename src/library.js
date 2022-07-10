@@ -15,55 +15,78 @@ const perPage = document.querySelector('#perPage');
 const libList = document.querySelector('.gallery-library__list');
 const btnList = document.querySelector('.btn__list');
 
-function addArrToLocalStor(key) {
-  return localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : [];
+function addToLocalStor(key, value) {
+  localStorage.getItem(key)
+    ? JSON.parse(localStorage.getItem(key))
+    : localStorage.setItem(key, JSON.stringify(value));
+  return JSON.parse(localStorage.getItem(key));
 }
-let wachedArray = addArrToLocalStor('watched');
-let queueArray = addArrToLocalStor('queue');
+// let wachedArray = addToLocalStor('watched', []);
+// let queueArray = addToLocalStor('queue', []);
 
-sessionStorage.getItem('currentList')
-  ? JSON.parse(sessionStorage.getItem('currentList'))
-  : sessionStorage.setItem('currentList', JSON.stringify('watched'));
-let currentList = JSON.parse(sessionStorage.getItem('currentList'));
+function addToSessionStor(key, value) {
+  sessionStorage.getItem(key)
+    ? JSON.parse(sessionStorage.getItem(key))
+    : sessionStorage.setItem(key, JSON.stringify(value));
+  return JSON.parse(sessionStorage.getItem(key));
+}
 
-sessionStorage.getItem('perPage')
-  ? JSON.parse(sessionStorage.getItem('perPage'))
-  : sessionStorage.setItem('perPage', JSON.stringify(9));
-let currentPerPage = Number(JSON.parse(sessionStorage.getItem('perPage')));
-perPage.value = currentPerPage;
+let currentList = addToSessionStor('currentList', 'watched');
+// let currentPerPageWa = addToSessionStor('perPageWa', 9);
+// let currentPerPageQu = addToSessionStor('perPageQu', 9);
+// let currentPageLibWa = addToSessionStor('currentPageLibWa', 1);
+// let currentPageLibQu = addToSessionStor('currentPageLibQu', 1);
 
-sessionStorage.getItem('currentPageLibWa')
-  ? JSON.parse(sessionStorage.getItem('currentPageLibWa'))
-  : sessionStorage.setItem('currentPageLibWa', JSON.stringify(1));
-let currentPageLibWa = JSON.parse(sessionStorage.getItem('currentPageLibWa'));
-
-sessionStorage.getItem('currentPageLibQu')
-  ? JSON.parse(sessionStorage.getItem('currentPageLibQu'))
-  : sessionStorage.setItem('currentPageLibQu', JSON.stringify(1));
-let currentPageLibQu = JSON.parse(sessionStorage.getItem('currentPageLibQu'));
-
-if (currentList === 'watched') {
-  watched.classList.add('btn-active');
-  queue.classList.remove('btn-active');
-  let total_pages = Math.ceil(wachedArray.length / currentPerPage);
+function renderWatchadFilmCare() {
+  const wachedArray = addToLocalStor('watched', []);
+  const currentPerPageWa = addToSessionStor('perPageWa', 9);
+  const currentPageLibWa = addToSessionStor('currentPageLibWa', 1);
+  perPage.value = currentPerPageWa;
+  const total_pages = Math.ceil(wachedArray.length / currentPerPageWa);
   counter(total_pages, currentPageLibWa);
   libList.innerHTML = renderMovieCard(
     wachedArray.slice(
-      (currentPageLibWa - 1) * currentPerPage,
-      currentPerPage * currentPageLibWa
+      (currentPageLibWa - 1) * currentPerPageWa,
+      currentPerPageWa * currentPageLibWa
     )
   );
-} else {
-  watched.classList.remove('btn-active');
-  queue.classList.add('btn-active');
-  let total_pages = Math.ceil(queueArray.length / currentPerPage);
+}
+
+function renderQueueFilmCard() {
+  const queueArray = addToLocalStor('queue', []);
+  const currentPerPageQu = addToSessionStor('perPageQu', 9);
+  const currentPageLibQu = addToSessionStor('currentPageLibQu', 1);
+  perPage.value = currentPerPageQu;
+  const total_pages = Math.ceil(queueArray.length / currentPerPageQu);
   counter(total_pages, currentPageLibQu);
   libList.innerHTML = renderMovieCard(
     queueArray.slice(
-      (currentPageLibQu - 1) * currentPerPage,
-      currentPerPage * currentPageLibQu
+      (currentPageLibQu - 1) * currentPerPageQu,
+      currentPerPageQu * currentPageLibQu
     )
   );
+}
+
+// -------Стартовий рендер---------
+
+if (JSON.parse(sessionStorage.getItem('currentList')) === 'watched') {
+  watched.classList.add('btn-active');
+  queue.classList.remove('btn-active');
+  renderWatchadFilmCare();
+} else {
+  watched.classList.remove('btn-active');
+  queue.classList.add('btn-active');
+  renderQueueFilmCard();
+}
+
+// -------Перемикання кнопками вочед і кюе---------
+
+watched.addEventListener('click', clickBtnWatch);
+function clickBtnWatch() {
+  watched.classList.add('btn-active');
+  queue.classList.remove('btn-active');
+  sessionStorage.setItem('currentList', JSON.stringify('watched'));
+  renderWatchadFilmCare();
 }
 
 queue.addEventListener('click', clickBtnQueue);
@@ -71,134 +94,77 @@ function clickBtnQueue() {
   watched.classList.remove('btn-active');
   queue.classList.add('btn-active');
   sessionStorage.setItem('currentList', JSON.stringify('queue'));
-  currentList = 'queue';
-  queueArray = addArrToLocalStor('queue');
-  let total_pages = Math.ceil(queueArray.length / currentPerPage);
-  counter(total_pages, currentPageLibQu);
-  libList.innerHTML = renderMovieCard(
-    queueArray.slice(
-      (currentPageLibQu - 1) * currentPerPage,
-      currentPerPage * currentPageLibQu
-    )
-  );
+  renderQueueFilmCard();
 }
 
-watched.addEventListener('click', clickBtnWatch);
-function clickBtnWatch() {
-  watched.classList.add('btn-active');
-  queue.classList.remove('btn-active');
-  sessionStorage.setItem('currentList', JSON.stringify('watched'));
-  currentList = 'watched';
-  wachedArray = addArrToLocalStor('watched');
-  let total_pages = Math.ceil(wachedArray.length / currentPerPage);
-  counter(total_pages, currentPageLibWa);
-  libList.innerHTML = renderMovieCard(
-    wachedArray.slice(
-      (currentPageLibWa - 1) * currentPerPage,
-      currentPerPage * currentPageLibWa
-    )
-  );
-}
-
-libList.addEventListener('click', clickCard);
-
-function clickCard(evt) {
-  if (currentList === 'watched') {
-    renderModal(evt, 'watched');
-    wachedArray = addArrToLocalStor('watched');
-    let total_pages = Math.ceil(wachedArray.length / currentPerPage);
-    counter(total_pages, currentPageLibWa);
-    libList.innerHTML = renderMovieCard(
-      wachedArray.slice(
-        (currentPageLibWa - 1) * currentPerPage,
-        currentPerPage * currentPageLibWa
-      )
-    );
-  } else {
-    renderModal(evt, 'queue');
-    queueArray = addArrToLocalStor('queue');
-    let total_pages = Math.ceil(queueArray.length / currentPerPage);
-    counter(total_pages, currentPageLibQu);
-    libList.innerHTML = renderMovieCard(
-      queueArray.slice(
-        (currentPageLibQu - 1) * currentPerPage,
-        currentPerPage * currentPageLibQu
-      )
-    );
-  }
-}
+// -------Зміна кількості елементів на сторінці---------
 
 perPage.addEventListener('change', onPage);
 function onPage(evt) {
-  let currentPerPage = evt.target.value;
-  sessionStorage.setItem('perPage', JSON.stringify(currentPerPage));
-
-  if (currentList === 'watched') {
+  if (JSON.parse(sessionStorage.getItem('currentList')) === 'watched') {
     watched.classList.add('btn-active');
     queue.classList.remove('btn-active');
-    wachedArray = addArrToLocalStor('watched');
-    let total_pages = Math.ceil(wachedArray.length / currentPerPage);
-    counter(total_pages, currentPageLibWa);
-    libList.innerHTML = renderMovieCard(
-      wachedArray.slice(
-        (currentPageLibWa - 1) * currentPerPage,
-        currentPerPage * currentPageLibWa
-      )
-    );
+    const PerPageWa = Number(evt.target.value);
+    sessionStorage.setItem('perPageWa', JSON.stringify(PerPageWa));
+    sessionStorage.setItem('currentPageLibWa', JSON.stringify(1));
+    renderWatchadFilmCare();
   } else {
     watched.classList.remove('btn-active');
     queue.classList.add('btn-active');
-    queueArray = addArrToLocalStor('queue');
-    let total_pages = Math.ceil(queueArray.length / currentPerPage);
-    counter(total_pages, currentPageLibQu);
-    libList.innerHTML = renderMovieCard(
-      queueArray.slice(
-        (currentPageLibQu - 1) * currentPerPage,
-        currentPerPage * currentPageLibQu
-      )
-    );
+    const PerPageQu = Number(evt.target.value);
+    sessionStorage.setItem('perPageQu', JSON.stringify(PerPageQu));
+    sessionStorage.setItem('currentPageLibQu', JSON.stringify(1));
+    renderQueueFilmCard();
   }
 }
+
+// -------Кнопки пагінації---------
 
 btnList.addEventListener('click', onClick);
 function onClick(evt) {
   if (evt.target.nodeName === 'BUTTON') {
     toTopOnClick();
-    if (currentList === 'watched') {
-      currentPageLibWa = JSON.parse(sessionStorage.getItem('currentPageLibWa'));
-      currentPageLibWa = clickCounter(evt, currentPageLibWa);
-      currentPerPage = Number(JSON.parse(sessionStorage.getItem('perPage')));
-      sessionStorage.setItem(
-        'currentPageLibWa',
-        JSON.stringify(currentPageLibWa)
-      );
-      wachedArray = addArrToLocalStor('watched');
-      let total_pages = Math.ceil(wachedArray.length / currentPerPage);
-      counter(total_pages, currentPageLibWa);
-      libList.innerHTML = renderMovieCard(
-        wachedArray.slice(
-          (currentPageLibWa - 1) * currentPerPage,
-          currentPerPage * currentPageLibWa
-        )
-      );
+    if (JSON.parse(sessionStorage.getItem('currentList')) === 'watched') {
+      let curPage = addToSessionStor('currentPageLibWa', 1);
+      curPage = Number(clickCounter(evt, curPage));
+      sessionStorage.setItem('currentPageLibWa', JSON.stringify(curPage));
+      renderWatchadFilmCare();
     } else {
-      currentPageLibQu = JSON.parse(sessionStorage.getItem('currentPageLibQu'));
-      currentPageLibQu = clickCounter(evt, currentPageLibQu);
-      currentPerPage = Number(JSON.parse(sessionStorage.getItem('perPage')));
-
-      sessionStorage.setItem(
-        'currentPageLibQu',
-        JSON.stringify(currentPageLibQu)
-      );
-      queueArray = addArrToLocalStor('queue');
-      let total_pages = Math.ceil(queueArray.length / currentPerPage);
-      counter(total_pages, currentPageLibQu);
-      libList.innerHTML = renderMovieCard(
-        queueArray.slice(
-          (currentPageLibQu - 1) * currentPerPage,
-          currentPerPage * currentPageLibQu
-        )
-      );
+      let curPage = JSON.parse(sessionStorage.getItem('currentPageLibQu'));
+      curPage = Number(clickCounter(evt, curPage));
+      sessionStorage.setItem('currentPageLibQu', JSON.stringify(curPage));
+      renderQueueFilmCard();
     }
   }
 }
+
+// ----
+
+libList.addEventListener('click', clickCard);
+function clickCard(evt) {
+  if (JSON.parse(sessionStorage.getItem('currentList')) === 'watched') {
+    renderModal(evt, 'watched');
+    // wachedArray = addArrToLocalStor('watched');
+    // let total_pages = Math.ceil(wachedArray.length / currentPerPageWa);
+    // counter(total_pages, currentPageLibWa);
+    // libList.innerHTML = renderMovieCard(
+    //   wachedArray.slice(
+    //     (currentPageLibWa - 1) * currentPerPageWa,
+    //     currentPerPageWa * currentPageLibWa
+    //   )
+    // );
+  } else {
+    renderModal(evt, 'queue');
+    // queueArray = addArrToLocalStor('queue');
+    // let total_pages = Math.ceil(queueArray.length / currentPerPageQu);
+    // counter(total_pages, currentPageLibQu);
+    // libList.innerHTML = renderMovieCard(
+    //   queueArray.slice(
+    //     (currentPageLibQu - 1) * currentPerPageQu,
+    //     currentPerPageQu * currentPageLibQu
+    //   )
+    // );
+  }
+}
+
+export { renderWatchadFilmCare, renderQueueFilmCard };

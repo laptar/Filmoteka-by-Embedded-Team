@@ -8,15 +8,14 @@ import { addToLocalStorage } from './js/addToLocalStorage';
 import './js/theme-switcher';
 import './sass/main.scss';
 import { toTopOnClick } from './js/scroll-up';
-// import { spinnerr } from './js/spinner';
 
 import { renderModal } from './js/modal.js';
 import { clickCounter } from './js/btn-pag';
 const btnList = document.querySelector('.btn__list');
 const list = document.querySelector('.gallery__list');
 const form = document.querySelector('.search');
-const warning = document.querySelector('.warning');
-const counterPage = document.querySelector('.counter');
+// const warning = document.querySelector('.warning');
+// const counterPage = document.querySelector('.counter');
 const logo = document.querySelector('.header__logo');
 
 let currentPage = sessionStorage.getItem('currentNumPage')
@@ -26,7 +25,7 @@ let query = sessionStorage.getItem('currentSerch')
   ? JSON.parse(sessionStorage.getItem('currentSerch'))
   : '';
 
-document.addEventListener('submit', onFormSubmit);
+form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
   e.preventDefault();
