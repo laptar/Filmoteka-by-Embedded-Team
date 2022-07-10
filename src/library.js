@@ -167,6 +167,7 @@ function onClick(evt) {
     if (currentList === 'watched') {
       currentPageLibWa = JSON.parse(sessionStorage.getItem('currentPageLibWa'));
       currentPageLibWa = clickCounter(evt, currentPageLibWa);
+      currentPerPage = Number(JSON.parse(sessionStorage.getItem('perPage')));
       sessionStorage.setItem(
         'currentPageLibWa',
         JSON.stringify(currentPageLibWa)
@@ -183,6 +184,8 @@ function onClick(evt) {
     } else {
       currentPageLibQu = JSON.parse(sessionStorage.getItem('currentPageLibQu'));
       currentPageLibQu = clickCounter(evt, currentPageLibQu);
+      currentPerPage = Number(JSON.parse(sessionStorage.getItem('perPage')));
+
       sessionStorage.setItem(
         'currentPageLibQu',
         JSON.stringify(currentPageLibQu)
