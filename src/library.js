@@ -70,18 +70,18 @@ function renderQueueFilmCard() {
 // -------Стартовий рендер---------
 
 if (JSON.parse(sessionStorage.getItem('currentList')) === 'watched') {
-  watched.classList.add('btn-active');
-  queue.classList.remove('btn-active');
+  watchedBtn.classList.add('btn-active');
+  queueBtn.classList.remove('btn-active');
   renderWatchadFilmCare();
 } else {
-  watched.classList.remove('btn-active');
-  queue.classList.add('btn-active');
+  watchedBtn.classList.remove('btn-active');
+  queueBtn.classList.add('btn-active');
   renderQueueFilmCard();
 }
 
 // -------Перемикання кнопками вочед і кюе---------
 
-watched.addEventListener('click', clickBtnWatch);
+watchedBtn.addEventListener('click', clickBtnWatch);
 function clickBtnWatch() {
   watchedBtn.classList.add('btn-active');
   queueBtn.classList.remove('btn-active');
@@ -89,7 +89,7 @@ function clickBtnWatch() {
   renderWatchadFilmCare();
 }
 
-queue.addEventListener('click', clickBtnQueue);
+queueBtn.addEventListener('click', clickBtnQueue);
 function clickBtnQueue() {
   watchedBtn.classList.remove('btn-active');
   queueBtn.classList.add('btn-active');
@@ -102,15 +102,11 @@ function clickBtnQueue() {
 perPage.addEventListener('change', onPage);
 function onPage(evt) {
   if (JSON.parse(sessionStorage.getItem('currentList')) === 'watched') {
-    watched.classList.add('btn-active');
-    queue.classList.remove('btn-active');
     const PerPageWa = Number(evt.target.value);
     sessionStorage.setItem('perPageWa', JSON.stringify(PerPageWa));
     sessionStorage.setItem('currentPageLibWa', JSON.stringify(1));
     renderWatchadFilmCare();
   } else {
-    watched.classList.remove('btn-active');
-    queue.classList.add('btn-active');
     const PerPageQu = Number(evt.target.value);
     sessionStorage.setItem('perPageQu', JSON.stringify(PerPageQu));
     sessionStorage.setItem('currentPageLibQu', JSON.stringify(1));
