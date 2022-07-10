@@ -8,6 +8,7 @@ const closeModalTeam = document.querySelector('.team-close');
 const backdropModalTeam = document.querySelector('.team-backdrop');
 const modalTeam = document.querySelector('[data-team]');
 
+console.log(openModalTeam);
 openModalTeam.addEventListener('click', openModal);
 
 function openModal(event) {
