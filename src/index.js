@@ -8,6 +8,7 @@ import { addToLocalStorage } from './js/addToLocalStorage';
 import './js/theme-switcher';
 import './sass/main.scss';
 import { toTopOnClick } from './js/scroll-up';
+import { spinnerr } from './js/spinner';
 
 import { renderModal } from './js/modal.js';
 import { clickCounter } from './js/btn-pag';
