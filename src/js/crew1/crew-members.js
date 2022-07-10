@@ -25,12 +25,6 @@ export default [
     git: 'https://github.com/IrynaSabinina',
   },
   {
-    name: 'Dmytro Shynkarenko',
-    photo: DmytroShynkarenko,
-    role: 'Developer',
-    git: 'https://github.com/SHDMYUA',
-  },
-  {
     name: 'Andriy Hrebenozhko',
     photo: AndriyHrebenozhko,
     role: 'Developer',
