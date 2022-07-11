@@ -12,7 +12,6 @@ function renderModal(event, nameStor) {
     body: document.querySelector('body'),
   };
   refs.body.classList.add('body-fixed');
-
   if (event.target.nodeName === 'IMG') {
     const arr = JSON.parse(localStorage.getItem(nameStor));
     const currentMovie = arr.find(
@@ -223,7 +222,6 @@ function renderModal(event, nameStor) {
       ? JSON.parse(sessionStorage.getItem('currentList'))
       : 'watched';
     if (!libList) {
-      console.log('ia tut');
       const currentPage = addArrToLocalStor('currentPage');
       homeList.innerHTML = renderMovieCard(currentPage);
       return;
@@ -287,7 +285,6 @@ function renderModal(event, nameStor) {
     }
   }
   function toggleModal() {
-    console.log('close');
     renderAfterAdd();
     refs.body.classList.remove('body-fixed');
     refs.modal.classList.add('is-hidden');
