@@ -1,5 +1,6 @@
 import { renderMovieCard } from './renderMovieCard';
-import { counter } from './btn-pag';
+// import { counter } from './btn-pag';
+import { renderWatchadFilmCare, renderQueueFilmCard } from '../library';
 const libList = document.querySelector('.gallery-library__list');
 const homeList = document.querySelector('.gallery__list');
 
@@ -10,9 +11,10 @@ function renderModal(event, nameStor) {
     info: document.querySelector('.modal'),
     body: document.querySelector('body'),
   };
-  refs.body.classList.add('body-fixed');
 
   if (event.target.nodeName === 'IMG') {
+    refs.body.classList.add('body-fixed');
+
     const arr = JSON.parse(localStorage.getItem(nameStor));
     const currentMovie = arr.find(
       curentId => String(curentId.id) === event.target.id
@@ -215,37 +217,9 @@ function renderModal(event, nameStor) {
       return;
     }
     if (currentList === 'watched') {
-      const wachedArray = addArrToLocalStor('watched');
-      const currentPerPage = Number(
-        JSON.parse(sessionStorage.getItem('perPage'))
-      );
-      const currentPageLibWa = JSON.parse(
-        sessionStorage.getItem('currentPageLibWa')
-      );
-      let total_pages = Math.ceil(wachedArray.length / currentPerPage);
-      counter(total_pages, currentPageLibWa);
-      libList.innerHTML = renderMovieCard(
-        wachedArray.slice(
-          (currentPageLibWa - 1) * currentPerPage,
-          currentPerPage * currentPageLibWa
-        )
-      );
+      renderWatchadFilmCare();
     } else {
-      const queueArray = addArrToLocalStor('queue');
-      const currentPerPage = Number(
-        JSON.parse(sessionStorage.getItem('perPage'))
-      );
-      const currentPageLibQu = JSON.parse(
-        sessionStorage.getItem('currentPageLibQu')
-      );
-      let total_pages = Math.ceil(queueArray.length / currentPerPage);
-      counter(total_pages, currentPageLibQu);
-      libList.innerHTML = renderMovieCard(
-        queueArray.slice(
-          (currentPageLibQu - 1) * currentPerPage,
-          currentPerPage * currentPageLibQu
-        )
-      );
+      renderQueueFilmCard();
     }
   }
   function toggleModal() {
