@@ -26,6 +26,7 @@ function addToLocalStorage(fetch, fetchGenres, page, movie = '') {
       localStorage.setItem('currentPage', JSON.stringify(cardGanr));
       if (cardGanr.length === 0) {
         warning.classList.remove('hidden');
+        sessionStorage.setItem('currentSerch', JSON.stringify(''));
         form.reset();
       } else {
         warning.classList.add('hidden');
