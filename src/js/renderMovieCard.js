@@ -13,9 +13,7 @@ function renderMovieCard(array) {
   if (array.length === 0) {
     return '<img class="gallery" src="https://c.tenor.com/KOZLvzU0o4kAAAAC/no-results.gif" width="500px" alt=""/>';
   }
-  console.log(array);
   const markup = array.map(movie => {
-    console.log(movie.release_date);
     const releaseDate = movie.release_date
       ? movie.release_date.split('-')[0]
       : 'unknown';

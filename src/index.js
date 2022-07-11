@@ -69,7 +69,6 @@ function onClick(evt) {
 logo.addEventListener('click', goHome);
 
 function goHome() {
-  console.log(123);
   query = '';
   currentPage = 1;
   addToLocalStorage(fetchPopular, fetchGenres, currentPage);

@@ -8,7 +8,6 @@ function addToLocalStorage(fetch, fetchGenres, page, movie = '') {
   sessionStorage.setItem('currentNumPage', JSON.stringify(page));
   sessionStorage.setItem('currentSerch', JSON.stringify(movie));
   fetch(page, movie).then(cards => {
-    console.log(cards.total_pages);
     fetchGenres().then(data => {
       const cardGanr = cards.results;
       cards.results.forEach((card, ind) => {
