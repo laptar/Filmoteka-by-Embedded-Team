@@ -1,5 +1,5 @@
 import throttle from 'lodash.throttle';
-const scrollUp = document.querySelector('[scroll-up-button]');
+const scrollUp = document.querySelector('[data-scroll-up-button]');
 
 window.addEventListener('scroll', throttle(hideOnScroll(scrollUp), 250));
 scrollUp.addEventListener('click', toTopOnClick);

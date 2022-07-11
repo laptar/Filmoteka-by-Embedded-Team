@@ -3,24 +3,31 @@
     <nav class="header__navigation">
       <a class="header__logo" href="./index.html">
         <svg class="logo-icon icon-film" width="24" height="24">
-          <use href="./images/SVG/sprite.svg#logo"></use>
-        </svg><span class="logo-title">Filmoteka</span>
+          <use href="./images/SVG/sprite.svg#logo"></use></svg
+        ><span class="logo-title">Filmoteka</span>
       </a>
       <ul class="header__navlist">
-        <a class="header__navlink header__navlink--active " href="">Home</a>
-        <a class="header__navlink" href="./library.html">My Library</a>
-
+        <li>
+          <a class="header__navlink header__navlink--active" href="">Home</a>
+        </li>
+        <li><a class="header__navlink" href="./library.html">My Library</a></li>
       </ul>
     </nav>
     <form class="search" id="search">
-      <input type="text" class="search-input" name="search" autocomplete="off" placeholder="Movie search" />
+      <input
+        type="text"
+        class="search-input"
+        name="search"
+        autocomplete="off"
+        placeholder="Movie search"
+      />
       <button type="submit" class="search-button">
         <svg class="search-icon" width="20" height="20">
           <use href="./images/SVG/sprite.svg#search"></use>
         </svg>
       </button>
     </form>
-    <div class="warning header-warning ">
+    <div class="warning header-warning">
       We are sorry but no results were found. Please try another film.
     </div>
 
@@ -31,9 +38,18 @@
         </svg>
 
         <div class="switch-control">
-          <input class="switch-toggle" type="checkbox" name="theme" id="theme-switch-toggle"
-            aria-label="Switch theme" />
-          <label aria-hidden="true" class="switch-track" for="theme-switch-toggle">
+          <input
+            class="switch-toggle"
+            type="checkbox"
+            name="theme"
+            id="theme-switch-toggle"
+            aria-label="Switch theme"
+          />
+          <label
+            aria-hidden="true"
+            class="switch-track"
+            for="theme-switch-toggle"
+          >
           </label>
           <div aria-hidden="true" class="switch-marker"></div>
         </div>
@@ -42,12 +58,5 @@
         </svg>
       </div>
     </div>
-
-
-
-
   </div>
-
-
-
 </div>
