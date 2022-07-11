@@ -11,9 +11,10 @@ function renderModal(event, nameStor) {
     info: document.querySelector('.modal'),
     body: document.querySelector('body'),
   };
-  refs.body.classList.add('body-fixed');
 
   if (event.target.nodeName === 'IMG') {
+    refs.body.classList.add('body-fixed');
+
     const arr = JSON.parse(localStorage.getItem(nameStor));
     const currentMovie = arr.find(
       curentId => String(curentId.id) === event.target.id
