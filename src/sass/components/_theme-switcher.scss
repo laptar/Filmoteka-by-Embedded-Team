@@ -12,6 +12,9 @@ body.dark-theme {
   & .js-open-modal {
     color: lightgrey;
   }
+  & .modal__title {
+    color: black;
+  }
 }
 
 .toolbar {
