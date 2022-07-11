@@ -1,5 +1,5 @@
 import { renderMovieCard } from './renderMovieCard';
-import { counter } from './btn-pag';
+// import { counter } from './btn-pag';
 import { renderWatchadFilmCare, renderQueueFilmCard } from '../library';
 const libList = document.querySelector('.gallery-library__list');
 const homeList = document.querySelector('.gallery__list');
